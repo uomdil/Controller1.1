@@ -22,6 +22,8 @@
 void Disp_Init();
 void Disp_GLCDClearDisp();
 void Disp_GLCDData(unsigned char data);
+//void Disp_GLCDNumber(uint32 number,uint8 row,uint8 col,uint8 state) //state=1 staet with disp write other with GLCDdata
+
 /*******************************************************************************
 * PUBLIC FUNCTION: Disp_GLCDInit
 *

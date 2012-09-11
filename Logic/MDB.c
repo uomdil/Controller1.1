@@ -45,6 +45,7 @@
 //UART1B - UART4 
 //UART3B - UART5 
 //UART2B - UART6
+
 #define PB_DIV                 	8
 #define PRESCALE               	256
 #define MILLISECOND				SYS_FREQ/PB_DIV/PRESCALE/1000
@@ -164,7 +165,7 @@
 
 #define NO_OF_BILLS	16
 
-#define MDB_DEBUG
+//#define MDB_DEBUG
 
 /* 
 ********************************************************************************************************* 
@@ -303,8 +304,8 @@ unsigned int preparePacket(unsigned int command,unsigned int unit){
 			default:break;
 		}
 	}
-	/*
-	//coin commands - to be filled
+	
+	/*//coin commands - to be filled
 	else if(unit == COIN_CHANGER_ADDRESS){
 		switch(command){
 			case RESET: break;
@@ -312,7 +313,7 @@ unsigned int preparePacket(unsigned int command,unsigned int unit){
 			case TUBE_STATUS: break;
 			case POLL: break;
 			case COIN_TYPE: break;
-			case DISPENSE: break;
+			case DISPENSE_COIN: break;
 			case EXPANSION: break;
 			default: break;
 		}	
@@ -578,15 +579,14 @@ void mdbStateMachine(){
 					mdbEnque(COMM_NEXT);
 				}
 				else if(eventId == COMM_SUCCESSFUL){
-					INTDisableInterrupts();
-					INTEnableInterrupts();
 					if(pendingCommand != NO_PENDING_CMD){
 						currentCommand = pendingCommand;
 						mdbEnque(COMM_NEXT);
 						pendingCommand = NO_PENDING_CMD;
 					}
-					closePollTimer();
-					startPollTimer();
+					else{
+						startPollTimer();
+					}
 					mdbState = IDLE_STATE;
 					#ifdef MDB_DEBUG
 						hal_sendString_UART1("over");
@@ -680,6 +680,8 @@ UART_INT(_UART_2, ipl2){
 			                
 			//put an event and then handle 
 			closeRetryTimer();
+			closePollTimer();
+			
 			receivePacket(temp);
 			#ifdef MDB_DEBUG
 				hal_sendChar_UART1(temp);
@@ -764,7 +766,6 @@ uint8 mdbGetNext(uint8 index){
       return ++index;
     }
 }
-
 
 
 

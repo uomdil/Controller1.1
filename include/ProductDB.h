@@ -121,7 +121,7 @@ void flashDB();
 void setTraySize(uint32 size);
 void setNoOfTrays(uint32 num);
 void process();
-
+uint32 getVMSerial();
 
 /* 
 ********************************************************************************************************* 

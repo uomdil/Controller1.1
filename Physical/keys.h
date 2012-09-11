@@ -142,16 +142,16 @@ uint32 key;
 
 
 #define check_key() switch(key){			\
-				case 0:count++;break;		\
-				case 1:count++;break;		\
-				case 2:count++;break;		\
-				case 3:count++;break;		\
-				case 4:count++;break;		\
-				case 5:count++;break;		\
-				case 6:count++;break;		\
-				case 7:count++;break;		\
-				case 8:count++;break;		\
-				case 9:count++;break;		\
+				case 0:keyPressCount++;break;		\
+				case 1:keyPressCount++;break;		\
+				case 2:keyPressCount++;break;		\
+				case 3:keyPressCount++;break;		\
+				case 4:keyPressCount++;break;		\
+				case 5:keyPressCount++;break;		\
+				case 6:keyPressCount++;break;		\
+				case 7:keyPressCount++;break;		\
+				case 8:keyPressCount++;break;		\
+				case 9:keyPressCount++;break;		\
 				case 10:enque(OK);break;	\
 				case 11:enque(CANCEL);break;\
 			}

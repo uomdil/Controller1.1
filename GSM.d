@@ -1,1 +1,1 @@
-GSM.o: Logic\GSM.c include/global.h physical/UART.h
+GSM.o: Logic\GSM.c include/GSM.h include/global.h physical/UART.h

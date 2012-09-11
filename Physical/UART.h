@@ -1,11 +1,6 @@
 #ifndef MDBUART
 #define MDBUART
 
-#define GSM_OK 10
-#define GSM_ERROR 11
-
-
-
 
 #define UART_INIT(PORT,BAUD,NO_BITS)  													     	 \
 		UARTConfigure(PORT, UART_ENABLE_PINS_TX_RX_ONLY); 									     \
@@ -99,7 +94,6 @@ UART_SEND_STRING_PROTO(UART1);
 void hal_uartWriteNumber(unsigned int no);
 
 
-uint8 getGSMStatus();
 
 
 #endif

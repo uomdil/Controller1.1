@@ -12,11 +12,15 @@ uint8 gsm_count =0;
 uint8 motor_response=0;
 uint8 motor=0;
 
+uint8 resposnse[3][5];
+uint8 first_idx=0;
+uint8 second_idx=0;
+
 
 void hal_allUARTInit(void){
 
-	//mPORTGOpenDrainOpen(BIT_8);			//Tray
-	mPORTDOpenDrainOpen(BIT_15);		//GSM
+	mPORTGOpenDrainOpen(BIT_8);			//Tray
+	//mPORTDOpenDrainOpen(BIT_15);		//GSM
 	
 	UART_INIT(UART1,DESIRED_BAUDRATE_1A,8_BITS)
 	UART_INIT(UART3,DESIRED_BAUDRATE_1A,8_BITS)	//tray
@@ -26,13 +30,13 @@ void hal_allUARTInit(void){
 
 //function prototype - void hal_sendString_##PORT (const char *string)
 UART_SEND_STRING(UART1)
-UART_SEND_STRING(UART4)	//gsm
+
 
 
 //function prototype - void hal_sendChar_##PORT (const char character)
 UART_SEND_CHAR(UART1)
 UART_SEND_CHAR(UART3)  //for tray
-UART_SEND_CHAR(UART4)	//gsm
+
 
 //interrupt service routines
 UART_INT(_UART_1, ipl2){
@@ -101,15 +105,24 @@ UART_INT(_UART_3, ipl2){
 		{                                           
 			uint8 x=UARTGetDataByte(UART3);
 			
+			resposnse[first_idx][second_idx]=x;
 			motor_response++;
+			second_idx++;
 			if(motor_response==5 && motor <2){
 				motor_response=0;
 				enque(MOTOR_OK);
 				motor++;
-			}else if(motor==2){   //response for the third motor
+				first_idx++;
+				second_idx=0;
+				//Disp_GLCDClearDisp();
+	    		//Disp_GLCDWriteText(0,1,"motor res");
+	    		//DelayMs(1000);
+			}else if(motor_response==5 && motor==2){   //response for the third motor
 				motor_response=0;
 				enque(MOTOR_OK);
 				motor=0;
+				first_idx=0;
+				second_idx=0;
 			}
 			
 		}											
@@ -121,59 +134,6 @@ UART_INT(_UART_3, ipl2){
 	
 }
 
-
-UART_INT(_UART_4, ipl2){
-	//UART_INT_TEST(UART4)
-	
-	
-	if(INTGetFlag(INT_SOURCE_UART_RX(UART4)))		
-	{												
-	    INTClearFlag(INT_SOURCE_UART_RX(UART4));	    
-	    if (UARTReceivedDataIsAvailable(UART4))      
-		{                                           
-			uint8 x=UARTGetDataByte(UART4);
-			
-			if(x=='O' && gsm_count ==0)
-			{
-				gsm_count++;
-			}
-			else if(x=='K' && gsm_count==1)
-			{
-				gsm_status = GSM_OK;
-				gsm_count = 0;
-			}
-			else if(x=='E' && gsm_count==0)
-			{
-				gsm_count++;
-			}
-			else if(x=='R' && gsm_count==1)
-			{
-				gsm_count++;
-			}
-			else if(x=='R' && gsm_count==2)
-			{
-				gsm_count++;
-			}
-			else if(x=='O' && gsm_count==3)
-			{
-				gsm_count++;
-			}
-			else if(x=='R' && gsm_count==4)
-			{
-				gsm_status = GSM_ERROR;
-				gsm_count = 0;
-			}
-			
-						
-		}											
-	}												
-	if ( INTGetFlag(INT_SOURCE_UART_TX(UART4)) )  	
-	{												
-		INTClearFlag(INT_SOURCE_UART_TX(UART4));	    
-	}
-	
-	
-}
 /*
 UART_INT(_UART_5, ipl2){
 	UART_INT_TEST(UART5)

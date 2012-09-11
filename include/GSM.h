@@ -40,9 +40,10 @@
 */ 
 
 
-#include <p32xxxx.h> 
-#include <plib.h>                   // include peripheral library function
+//#include <p32xxxx.h> 
+//#include <plib.h>                   // include peripheral library function
 #include "global.h"
+#include "UART.h"
 
 /* 
 ********************************************************************************************************* 
@@ -50,7 +51,36 @@
 ********************************************************************************************************* 
 */ 
 
+#define GSM_NO_OF_EVENTS 6
 
+//events
+#define CHECK_MODEM				1
+#define OK_RECEIVED				2
+#define ERROR_RECEIVED			3
+#define SMS_RECEIVED			4
+#define RECV_SMS				5
+#define SEND_SMS				6
+#define GSM_INITIALIZED			7
+
+
+//states
+#define GSM_INIT_STATE	1
+#define GSM_READY_STATE	2
+
+//commands
+#define NO_COMMAND				0
+#define SMS_SEND_COMMAND		1
+#define SMS_RECV_COMMAND		2
+#define INIT_COMMANDS			3
+
+//other definitions
+#define RETRY_LIMIT				3
+
+
+//errors
+#define GSM_UNIT_ERROR			0
+#define GSM_UNIT_NOT_RESPONDING	1
+#define GSM_UNIT_SMS_RECVD		2
 
 /* 
 ********************************************************************************************************* 
@@ -66,7 +96,8 @@
 *                                               EXTERNS 
 ********************************************************************************************************* 
 */ 
-
+extern char gsmPaymentInfo[4][20];
+extern unsigned char isGsmInitialized;
 
 /* 
 ********************************************************************************************************* 
@@ -81,12 +112,17 @@
 ********************************************************************************************************* 
 */ 
 
+
+
 /* 
 ********************************************************************************************************* 
 *                                        FUNCTION PROTOTYPES 
 ********************************************************************************************************* 
 */ 
-
+void gsmInit();
+void gsmStateMachine();
+void gsmSetSmsParameters(char* msg, unsigned int len);
+uint8 gsmEnque(uint8 eventId);
 
 
 /* 
@@ -101,5 +137,15 @@
 *                                           MODULE END 
 ********************************************************************************************************* 
 */
+
+//process the SMS received
+//response
+
+/*+CMGR: “REC UNREAD”,”0146290800”,
+”98/10/01,18 :22 :11+00”,<CR><LF>
+ABCdefGHI
+OK
+*/
+
 
 #endif

@@ -60,8 +60,8 @@ void VendMotor1(uint8 trayNo)
 	//motor1
 	hal_sendChar_UART3((uint8)0x00);
 	hal_sendChar_UART3((uint8)0xFF);
-	hal_sendChar_UART3(trayNo);		//motor 32 for 0x98
-	hal_sendChar_UART3((uint8)0x67);
+	hal_sendChar_UART3((uint8)trayNo);		//motor 32 for 0x98
+	hal_sendChar_UART3((uint8)(~trayNo));
 	hal_sendChar_UART3((uint8)0x55);
 	hal_sendChar_UART3((uint8)0xAA);
 

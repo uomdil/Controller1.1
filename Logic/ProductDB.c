@@ -56,6 +56,7 @@ uint32 event;
 uint32 traySize=0;
 uint32 noOftrays=0;
 
+uint32 VMSerial=0;
 
 uint8 i=0;
 uint8 j=0;
@@ -70,6 +71,8 @@ uint8 arr[500];
 
 void InitDB()
 {
+	uint32* vmserial = read_flash_page( 4, 2);	//vending machine serial
+	VMSerial=*vmserial;
 	uint32* tmp  = read_flash_page( sizeof(tbl)/4, 0);
 	uint16 i=0;
 	uint16 count=WORD_SIZE+4;
@@ -148,6 +151,7 @@ void flashDB()
 	write_flash_page((uint32)tbl, sizeof(tbl)/4 , 0);
 	write_flash_word(traySize, NVM_PROGRAM_PAGE+NVM_PAGE_SIZE);
 	write_flash_word(noOftrays, NVM_PROGRAM_PAGE+NVM_PAGE_SIZE+32);
+	write_flash_word(VMSerial, NVM_PROGRAM_PAGE+2*NVM_PAGE_SIZE);
 }
 
 void setTraySize(uint32 size)
@@ -158,6 +162,11 @@ void setTraySize(uint32 size)
 void setNoOfTrays(uint32 num)
 {
 	noOftrays = num;
+}
+
+uint32 getVMSerial()
+{
+	return VMSerial;
 }
 
 

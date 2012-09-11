@@ -412,6 +412,43 @@ void Disp_GLCDClearGraphics()
 
 
 
+/*void Disp_GLCDNumber(uint32 number,uint8 row,uint8 col,uint8 state) //state=1 staet with disp write other with GLCDdata
+{
+	uint8 thou=enteredValue/1000;
+	
+	if(state ==1){
+	
+		if(thou!=0){
+			Disp_GLCDWrite(col,row,(thou)+'0');
+		col++;
+		}
+		if(((enteredValue/100)-thou*10 !=0)){
+			Disp_GLCDData(((enteredValue/100)-thou*10)+'0');
+		}
+		if((((enteredValue%100)-enteredValue%10)/10+'0') !=0){
+			Disp_GLCDWrite(col,row,((enteredValue%100)-enteredValue%10)/10+'0');
+		}
+		Disp_GLCDData(enteredValue%10+'0');
+	}else{
+		
+		if(thou!=0){
+			Disp_GLCDData((thou)+'0');
+		}
+		if(((enteredValue/100)-thou*10 !=0)){
+			Disp_GLCDWrite(col,row,((enteredValue/100)-thou*10)+'0');
+			col++;
+		}
+		if((((enteredValue%100)-enteredValue%10)/10+'0') !=0){
+			Disp_GLCDData(((enteredValue%100)-enteredValue%10)/10+'0');
+		}
+		Disp_GLCDWrite(col,row,enteredValue%10+'0');
+	
+	}
+}
+*/
+
+
+
 
 
 
