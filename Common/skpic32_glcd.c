@@ -4,6 +4,7 @@
 #include "TimeDelay.h"
 #include "skpic32_glcd.h"
 #include "graphics.h"
+#include "global.h"
 
 void Disp_Init(){
 
@@ -412,40 +413,55 @@ void Disp_GLCDClearGraphics()
 
 
 
-/*void Disp_GLCDNumber(uint32 number,uint8 row,uint8 col,uint8 state) //state=1 staet with disp write other with GLCDdata
+void Disp_GLCDNumber(unsigned int number,unsigned char row,unsigned char col,unsigned char state) //state=1 staet with disp write other with GLCDdata
 {
-	uint8 thou=enteredValue/1000;
+	uint8 thou=number/1000;
 	
 	if(state ==1){
-	
 		if(thou!=0){
 			Disp_GLCDWrite(col,row,(thou)+'0');
-		col++;
+			col++;
+			Disp_GLCDData(((number/100)-thou*10)+'0');
+			Disp_GLCDWrite(col,row,((number%100)-number%10)/10+'0');
+			Disp_GLCDData(number%10+'0');
 		}
-		if(((enteredValue/100)-thou*10 !=0)){
-			Disp_GLCDData(((enteredValue/100)-thou*10)+'0');
+		else if(((number/100)-thou*10 !=0)){
+			Disp_GLCDWrite(col,row,((number/100)-thou*10)+'0');
+			col++;
+			Disp_GLCDData(((number%100)-number%10)/10+'0');
+			Disp_GLCDWrite(col,row,number%10+'0');
 		}
-		if((((enteredValue%100)-enteredValue%10)/10+'0') !=0){
-			Disp_GLCDWrite(col,row,((enteredValue%100)-enteredValue%10)/10+'0');
+		else if(((number%100)-number%10)/10 !=0 ){
+			Disp_GLCDWrite(col,row,((number%100)-number%10)/10+'0');
+			Disp_GLCDData(number%10+'0');
 		}
-		Disp_GLCDData(enteredValue%10+'0');
-	}else{
-		
+		else{
+			Disp_GLCDWrite(col,row,number%10+'0');
+		}
+	}
+	else{
 		if(thou!=0){
 			Disp_GLCDData((thou)+'0');
-		}
-		if(((enteredValue/100)-thou*10 !=0)){
-			Disp_GLCDWrite(col,row,((enteredValue/100)-thou*10)+'0');
+			Disp_GLCDWrite(col,row,((number/100)-thou*10)+'0');
 			col++;
+			Disp_GLCDData(((number%100)-number%10)/10+'0');
+			Disp_GLCDWrite(col,row,number%10+'0');
 		}
-		if((((enteredValue%100)-enteredValue%10)/10+'0') !=0){
-			Disp_GLCDData(((enteredValue%100)-enteredValue%10)/10+'0');
+		else if(((number/100)-thou*10 !=0)){
+			Disp_GLCDData(((number/100)-thou*10)+'0');
+			Disp_GLCDWrite(col,row,((number%100)-number%10)/10+'0');
+			Disp_GLCDData(number%10+'0');
 		}
-		Disp_GLCDWrite(col,row,enteredValue%10+'0');
-	
+		else if(((number%100)-number%10)/10 !=0 ){
+			Disp_GLCDData(((number%100)-number%10)/10+'0');
+			Disp_GLCDWrite(col,row,number%10+'0');
+		}
+		else{
+			Disp_GLCDData(number%10+'0');
+		}
 	}
 }
-*/
+
 
 
 

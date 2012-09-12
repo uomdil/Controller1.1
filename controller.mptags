@@ -6,52 +6,55 @@
 !_TAG_PROGRAM_VERSION	5.5.4	//
 !_TAG_REVISION_NAME	MCHPTags	//
 !_TAG_REVISION_VERSION	6.0.1	//
-ACK::0x00	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	96;"	d	line:96	file:
+ACK::0x00	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	97;"	d	line:97	file:
 ALL_CLEAR::mPORTBOpenDrainClose(COL1|COL2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	64;"	d	line:64	file:
 ALL_SET::PORTSetBits(IOPORT_B,COL1|COL2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	57;"	d	line:57	file:
 AMOUNT::5	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	68;"	d	line:68
-AMOUNT_SELECT	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	730;"	l	line:730
-AMOUNT_SELECT::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	51;"	d	line:51	file:
-BILL_RETURNED::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	113;"	d	line:113	file:
-BILL_SCALE_FACTOR_POS::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	123;"	d	line:123	file:
-BILL_STACKED::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	111;"	d	line:111	file:
-BILL_STATUS_BITS::0b01110000	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	108;"	d	line:108	file:
-BILL_TO_RECYCLER::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	114;"	d	line:114	file:
-BILL_TO_RECYCLER_MANUAL_FILL::5	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	116;"	d	line:116	file:
-BILL_TYPE::0x04	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	90;"	d	line:90	file:
-BILL_TYPE_BITS::0b00001111	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	107;"	d	line:107	file:
-BILL_TYPE_BYTES::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	152;"	d	line:152	file:
-BILL_TYPE_ENABLE_HIGH_BYTE::0x00	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	138;"	d	line:138	file:
-BILL_TYPE_ENABLE_LOW_BYTE::0x00	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	139;"	d	line:139	file:
-BILL_TYPE_ESCROW_ENABLE_HIGH_BYTE::0x00	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	140;"	d	line:140	file:
-BILL_TYPE_ESCROW_ENABLE_LOW_BYTE::0x00	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	141;"	d	line:141	file:
-BILL_TYPE_POS::11	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	121;"	d	line:121	file:
-BILL_VALIDATOR_ADDRESS::0x30	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	80;"	d	line:80	file:
+AMOUNT_SELECT	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	824;"	l	line:824
+AMOUNT_SELECT::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	52;"	d	line:52	file:
+BILL_RETURNED::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	114;"	d	line:114	file:
+BILL_SCALE_FACTOR_POS::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	124;"	d	line:124	file:
+BILL_STACKED::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	112;"	d	line:112	file:
+BILL_STATUS_BITS::0b01110000	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	109;"	d	line:109	file:
+BILL_TO_RECYCLER::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	115;"	d	line:115	file:
+BILL_TO_RECYCLER_MANUAL_FILL::5	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	117;"	d	line:117	file:
+BILL_TYPE::0x04	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	91;"	d	line:91	file:
+BILL_TYPE_BITS::0b00001111	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	108;"	d	line:108	file:
+BILL_TYPE_BYTES::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	153;"	d	line:153	file:
+BILL_TYPE_ENABLE_HIGH_BYTE::0x00	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	139;"	d	line:139	file:
+BILL_TYPE_ENABLE_LOW_BYTE::0x00	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	140;"	d	line:140	file:
+BILL_TYPE_ESCROW_ENABLE_HIGH_BYTE::0x00	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	141;"	d	line:141	file:
+BILL_TYPE_ESCROW_ENABLE_LOW_BYTE::0x00	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	142;"	d	line:142	file:
+BILL_TYPE_POS::11	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	122;"	d	line:122	file:
+BILL_VALIDATOR_ADDRESS::0x30	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	81;"	d	line:81	file:
 BIT	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	66;"	t	line:66
 BOOL	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	65;"	t	line:65
 BYTE	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	342;"	t	line:342
 BYTE_BITS	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	368;"	t	line:368
 BYTE_VAL	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	368;"	t	line:368
 BusyFlag	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	306;"	f	line:306	signature:(uint8 address)
+CANCEL::9	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	103;"	d	line:103
+CASH_IN::5	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	99;"	d	line:99
 CENT::7	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	70;"	d	line:70
 CGRAM	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	399;"	f	line:399
 CGRAM_adress	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	272;"	f	line:272	signature:(uint8 address)
 CGTAB	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	384;"	v	line:384
 CHAR	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	348;"	t	line:348
 CHAR8	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	339;"	t	line:339
-CHECK_BYTES::(OF)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	164;"	d	line:164	file:
-CHECK_METHOD::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	52;"	d	line:52	file:
+CHECK_BYTES::(OF)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	165;"	d	line:165	file:
+CHECK_METHOD::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	53;"	d	line:53	file:
 CHECK_MODEM::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	57;"	d	line:57
 CLEAR	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	66;"	e	line:66	enum:_BIT
-COIN_CHANGER_ADDRESS::0x08	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	81;"	d	line:81	file:
-COIN_TYPE::0x04	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	130;"	d	line:130	file:
+COIN_CHANGER_ADDRESS::0x08	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	82;"	d	line:82	file:
+COIN_IN::6	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	100;"	d	line:100
+COIN_TYPE::0x04	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	131;"	d	line:131	file:
 COL1::BIT_3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	45;"	d	line:45	file:
 COL2::BIT_4	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	46;"	d	line:46	file:
 COL3::BIT_5	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	47;"	d	line:47	file:
 COL4::BIT_13	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	48;"	d	line:48	file:
-COMM_NEXT::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	73;"	d	line:73	file:
-COMM_STATE::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	70;"	d	line:70	file:
-COMM_SUCCESSFUL::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	75;"	d	line:75	file:
+COMM_NEXT::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	74;"	d	line:74	file:
+COMM_STATE::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	71;"	d	line:71	file:
+COMM_SUCCESSFUL::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	76;"	d	line:76	file:
 COMPILER_HITECH_PICC18	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	68;"	d	line:68
 COMPILER_MPLAB_C18	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	61;"	d	line:61
 COMPILER_MPLAB_C30	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	72;"	d	line:72
@@ -64,7 +67,7 @@ COMPILER_MPLAB_C30	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_co
 COMPILER_MPLAB_C32	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	109;"	d	line:109
 CONFIG::(CN_OFF)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.h	56;"	d	line:56
 CONSOLE_UPDATE::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	58;"	d	line:58
-CURRENCY_CODE_POS::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	122;"	d	line:122	file:
+CURRENCY_CODE_POS::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	123;"	d	line:123	file:
 Character_Blink	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	211;"	f	line:211	signature:(uint8 state)
 ClrWdt::(WDTCONSET=_WDTCON_WDTCLR_MASK	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	189;"	d	line:189
 ClrWdt::asm("CLRWDT");	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	168;"	d	line:168
@@ -86,39 +89,42 @@ DB7::LATGbits.LATG13	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_
 DB7::PORTGbits.RG13	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.h	62;"	d	line:62
 DDRAM_adress	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	290;"	f	line:290	signature:(uint8 address)
 DEC::6	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	69;"	d	line:69
-DESIRED_BAUDRATE::(9600)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	60;"	d	line:60	file:
+DESIRED_BAUDRATE::(9600)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	61;"	d	line:61	file:
 DESIRED_BAUDRATE_1A::(9600)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	6;"	d	line:6	file:
-DISABLED_BILL_REJECTED::4	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	115;"	d	line:115	file:
-DISPENSE_COIN::0x05	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	131;"	d	line:131	file:
+DIAGNOSE::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	94;"	d	line:94
+DIAGNOSTIC::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	77;"	d	line:77
+DISABLED_BILL_REJECTED::4	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	116;"	d	line:116	file:
+DISPENSE::8	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	84;"	d	line:84
+DISPENSE_COIN::0x05	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	132;"	d	line:132	file:
 DWORD	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	344;"	t	line:344
 DWORD_VAL	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	457;"	t	line:457
 Delay10us	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\TimeDelay.c	69;"	f	line:69	signature:( UINT32 tenMicroSecondCounter )
 Delay10us	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\TimeDelay.h	58;"	p	line:58	signature:( UINT32 tenMicroSecondCounter )
 DelayMs	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\TimeDelay.c	176;"	f	line:176	signature:( UINT16 ms )
 DelayMs	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\TimeDelay.h	79;"	p	line:79	signature:( UINT16 ms )
-Disp_GLCDClearDisp	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	283;"	f	line:283
+Disp_GLCDClearDisp	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	284;"	f	line:284
 Disp_GLCDClearDisp	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\skpic32_glcd.h	23;"	p	line:23	signature:()
-Disp_GLCDClearGraphics	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	388;"	f	line:388
+Disp_GLCDClearGraphics	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	389;"	f	line:389
 Disp_GLCDClearGraphics	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\skpic32_glcd.h	174;"	p	line:174	signature:()
-Disp_GLCDCommand	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	81;"	f	line:81	signature:(unsigned char command)
+Disp_GLCDCommand	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	82;"	f	line:82	signature:(unsigned char command)
 Disp_GLCDCommand	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\skpic32_glcd.h	56;"	p	line:56	signature:(unsigned char)
-Disp_GLCDData	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	123;"	f	line:123	signature:(unsigned char data)
+Disp_GLCDData	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	124;"	f	line:124	signature:(unsigned char data)
 Disp_GLCDData	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\skpic32_glcd.h	24;"	p	line:24	signature:(unsigned char data)
 Disp_GLCDData	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\skpic32_glcd.h	71;"	p	line:71	signature:(unsigned char)
-Disp_GLCDDisableGraphics	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	326;"	f	line:326
+Disp_GLCDDisableGraphics	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	327;"	f	line:327
 Disp_GLCDDisableGraphics	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\skpic32_glcd.h	143;"	p	line:143	signature:()
-Disp_GLCDEnableGraphics	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	304;"	f	line:304
+Disp_GLCDEnableGraphics	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	305;"	f	line:305
 Disp_GLCDEnableGraphics	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\skpic32_glcd.h	128;"	p	line:128	signature:()
-Disp_GLCDFillScreenGraphic	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	345;"	f	line:345	signature:(const unsigned char* graphic)
+Disp_GLCDFillScreenGraphic	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	346;"	f	line:346	signature:(const unsigned char* graphic)
 Disp_GLCDFillScreenGraphic	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\skpic32_glcd.h	158;"	p	line:158	signature:(const unsigned char*)
-Disp_GLCDInit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	41;"	f	line:41
+Disp_GLCDInit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	42;"	f	line:42
 Disp_GLCDInit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\skpic32_glcd.h	41;"	p	line:41	signature:()
-Disp_GLCDNumber	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	415;"	f	line:415	signature:(uint8 number,uint8 row,uint8 col,uint8 state)
-Disp_GLCDWrite	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	191;"	f	line:191	signature:(unsigned char col, unsigned char row, unsigned char inpChr)
+Disp_GLCDNumber	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	416;"	f	line:416	signature:(unsigned int number,unsigned char row,unsigned char col,unsigned char state)
+Disp_GLCDWrite	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	192;"	f	line:192	signature:(unsigned char col, unsigned char row, unsigned char inpChr)
 Disp_GLCDWrite	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\skpic32_glcd.h	86;"	p	line:86	signature:(unsigned char, unsigned char, unsigned char)
-Disp_GLCDWriteText	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	256;"	f	line:256	signature:(unsigned char col, unsigned char row, char* string)
+Disp_GLCDWriteText	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	257;"	f	line:257	signature:(unsigned char col, unsigned char row, char* string)
 Disp_GLCDWriteText	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\skpic32_glcd.h	113;"	p	line:113	signature:(unsigned char, unsigned char, char*)
-Disp_Init	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	8;"	f	line:8
+Disp_Init	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	9;"	f	line:9
 Disp_Init	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\skpic32_glcd.h	22;"	p	line:22	signature:()
 Display	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	189;"	f	line:189	signature:(uint8 state)
 Display_Clear	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	145;"	f	line:145
@@ -126,35 +132,50 @@ Display_Clear	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V
 E::LATCbits.LATC1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\skpic32_glcd.h	19;"	d	line:19
 E::PORTCbits.RC1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.h	54;"	d	line:54
 END::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	65;"	d	line:65
+ENTER_NO::10	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	104;"	d	line:104
+ERROR::13	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	107;"	d	line:107
 ERROR_RECEIVED::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	59;"	d	line:59
-ESCROW::0x05	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	91;"	d	line:91	file:
-ESCROW_BYTES::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	153;"	d	line:153	file:
-ESCROW_POSITION::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	112;"	d	line:112	file:
-EXPANSION::0x07	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	93;"	d	line:93	file:
-EXPANSION_BYTES::29	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	149;"	d	line:149	file:
+ESCROW::0x05	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	92;"	d	line:92	file:
+ESCROW_BYTES::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	154;"	d	line:154	file:
+ESCROW_POSITION::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	113;"	d	line:113	file:
+EXPANSION::0x07	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	94;"	d	line:94	file:
+EXPANSION_BYTES::29	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	150;"	d	line:150	file:
 Entry_Mode	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	169;"	f	line:169	signature:(uint8 cursor,uint8 shift)
 Extended_instruct	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	256;"	f	line:256	signature:(uint8 extd)
 FALSE	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	65;"	e	line:65	enum:_BOOL
+FALSE::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	142;"	d	line:142
 FAR	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	187;"	d	line:187
 FAR::__attribute__((far))	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	180;"	d	line:180
 FAR::far	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	156;"	d	line:156
 FILL_TABLE::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	64;"	d	line:64
+FIN::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	97;"	d	line:97
 FIN_TABLE::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	63;"	d	line:63
+FIRST_MOTOR::18	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	112;"	d	line:112
 FLASH	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.h	32;"	d	line:32
+False::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	148;"	d	line:148
+GLOBAL	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	32;"	d	line:32
 GLOBAL	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\main.h	32;"	d	line:32
 GSM	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	32;"	d	line:32
 GSM_BAUDRATE::9600	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	64;"	d	line:64	file:
 GSM_BIT::BIT_15	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	63;"	d	line:63	file:
-GSM_ERROR::11	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	5;"	d	line:5
+GSM_CONTROL::12	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	88;"	d	line:88
+GSM_DEBUG	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	75;"	d	line:75	file:
+GSM_ERROR::24	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	121;"	d	line:121
 GSM_INITIALIZED::7	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	63;"	d	line:63
 GSM_INIT_STATE::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	67;"	d	line:67
+GSM_NOT_RESPONDING::25	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	122;"	d	line:122
 GSM_NO_OF_EVENTS::6	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	54;"	d	line:54
-GSM_OK::10	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	4;"	d	line:4
-GSM_PORT	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	125;"	v	line:125
-GSM_PORT	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	126;"	v	line:126
+GSM_PORT	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	138;"	v	line:138
+GSM_PORT	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	139;"	v	line:139
 GSM_PORT::UART4	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	65;"	d	line:65	file:
 GSM_READY_STATE::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	68;"	d	line:68
+GSM_UNIT_ERROR::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	81;"	d	line:81
+GSM_UNIT_NOT_RESPONDING::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	82;"	d	line:82
+GSM_UNIT_SMS_RECVD::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	83;"	d	line:83
 GSM_VECTOR::_UART_4	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	66;"	d	line:66	file:
+GetInstructionClock::(GetSystemClock)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	68;"	d	line:68
+GetPeripheralClock::(GetSystemClock/(1<<OSCCONbits	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	67;"	d	line:67
+GetSystemClock::(80000000ul)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	66;"	d	line:66
 HB	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	120;"	m	line:120	struct:<anonymous>::__PACKED
 HB	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	152;"	m	line:152	struct:<anonymous>::__PACKED
 HB	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	198;"	m	line:198	struct:<anonymous>::__PACKED
@@ -166,21 +187,23 @@ HW	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include
 HW	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	260;"	m	line:260	struct:<anonymous>::__PACKED
 HW	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	408;"	m	line:408	struct:<anonymous>::__PACKED
 HW	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	474;"	m	line:474	struct:<anonymous>::__PACKED
-IDLE_STATE::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	69;"	d	line:69	file:
-INIT_CMD_LENGTH::5	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	126;"	d	line:126	file:
+IDLE_STATE::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	70;"	d	line:70	file:
+INIT::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	78;"	d	line:78
+INIT_CMD_LENGTH::5	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	127;"	d	line:127	file:
 INIT_COMMANDS::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	74;"	d	line:74
+INIT_VARS::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	95;"	d	line:95
 INT	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	73;"	t	line:73
 INT16	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	75;"	t	line:75
 INT32	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	76;"	t	line:76
 INT64	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	80;"	t	line:80
 INT8	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	74;"	t	line:74
 INTERRUPT::(CHANGE_INT_ON|CHANGE_INT_PRI_	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.h	59;"	d	line:59
-INT_SOURCE_UART_RX	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	172;"	p	line:172	file:
-INT_SOURCE_UART_RX	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	673;"	p	line:673	file:
+INT_SOURCE_UART_RX	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	186;"	p	line:186	file:
+INT_SOURCE_UART_RX	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	674;"	p	line:674	file:
 INT_SOURCE_UART_RX	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	103;"	p	line:103	file:
 INT_SOURCE_UART_RX	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	46;"	p	line:46	file:
-INT_SOURCE_UART_TX	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	185;"	p	line:185	file:
-INT_SOURCE_UART_TX	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	693;"	p	line:693	file:
+INT_SOURCE_UART_TX	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	239;"	p	line:239	file:
+INT_SOURCE_UART_TX	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	694;"	p	line:694	file:
 INT_SOURCE_UART_TX	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	132;"	p	line:132	file:
 INT_SOURCE_UART_TX	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	71;"	p	line:71	file:
 Idle::{__asm__volatile("pwrsav#1");}	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	103;"	d	line:103
@@ -200,45 +223,50 @@ LD	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include
 LD	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	468;"	m	line:468	struct:<anonymous>::__PACKED
 LEFT::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.h	67;"	d	line:67
 LENGTH::8	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	71;"	d	line:71
-LKR_CODE::0x1144	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	124;"	d	line:124	file:
+LKR_CODE::0x1144	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	125;"	d	line:125	file:
+LOCK_DOWN::26	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	123;"	d	line:123
 LONG	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	350;"	t	line:350
 LONGLONG	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	353;"	t	line:353
 LW	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	192;"	m	line:192	struct:<anonymous>::__PACKED
 LW	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	259;"	m	line:259	struct:<anonymous>::__PACKED
 LW	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	407;"	m	line:407	struct:<anonymous>::__PACKED
 LW	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	473;"	m	line:473	struct:<anonymous>::__PACKED
-MANUAL_DISPENSE::6	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	117;"	d	line:117	file:
+MANUAL_DISPENSE::6	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	118;"	d	line:118	file:
 MB	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	200;"	m	line:200	struct:<anonymous>::__PACKED
 MB	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	415;"	m	line:415	struct:<anonymous>::__PACKED
 MDBUART	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	2;"	d	line:2
-MDB_PORT	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	231;"	v	line:231
-MDB_PORT::UART2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	61;"	d	line:61	file:
-MDB_SEND_9_DATA	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	666;"	f	line:666
-MDB_SEND_9_DATA::(PORT)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	75;"	d	line:75
-MDB_SEND_9_DATA_PROTO::(PORT)voidhal_uartSend9bitData	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	76;"	d	line:76
-MDB_VECTOR::_UART_2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	62;"	d	line:62	file:
-MESSAGE_RECEIVED::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	74;"	d	line:74	file:
-MILLISECOND::SYS_FREQ/PB_DIV/PRESCALE/1000	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	50;"	d	line:50	file:
-MODE_BIT::0x100	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	82;"	d	line:82	file:
+MDB_PORT	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	232;"	v	line:232
+MDB_PORT::UART2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	62;"	d	line:62	file:
+MDB_SEND_9_DATA	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	667;"	f	line:667
+MDB_SEND_9_DATA::(PORT)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	70;"	d	line:70
+MDB_SEND_9_DATA_PROTO::(PORT)voidhal_uartSend9bitData	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	71;"	d	line:71
+MDB_VECTOR::_UART_2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	63;"	d	line:63	file:
+MESSAGE_RECEIVED::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	75;"	d	line:75	file:
+MILLISECOND::SYS_FREQ/PB_DIV/PRESCALE/1000	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	72;"	d	line:72	file:
+MILLISECOND::SYS_FREQ/PB_DIV/PRESCALE/1000	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	51;"	d	line:51	file:
+MODE_BIT::0x100	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	83;"	d	line:83	file:
+MORE_DATA::4	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	98;"	d	line:98
+MOTOR_OK::21	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	115;"	d	line:115
 MPU_bus	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	245;"	f	line:245	signature:(uint8 bus)
 MW	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	262;"	m	line:262	struct:<anonymous>::__PACKED
 MW	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	476;"	m	line:476	struct:<anonymous>::__PACKED
-NAK::0xFF	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	97;"	d	line:97	file:
+NAK::0xFF	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	98;"	d	line:98	file:
 NAME::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	66;"	d	line:66
-NFC	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\NFC.h	32;"	d	line:32
-NFCStart	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\NFC.c	91;"	f	line:91
-NFCStop	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\NFC.c	98;"	f	line:98
-NFC_BAUDRATE::9600	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\NFC.c	44;"	d	line:44	file:
-NFC_Init	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\NFC.c	77;"	f	line:77
-NFC_Init	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\NFC.h	93;"	p	line:93	signature:()
-NFC_PORT::UART5	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\NFC.c	45;"	d	line:45	file:
-NFCmsg	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	547;"	l	line:547
-NONE::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	57;"	d	line:57	file:
-NOT_INIT::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	54;"	d	line:54	file:
+NFC_CONFIRM::23	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	117;"	d	line:117
+NFC_ERROR::28	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	125;"	d	line:125
+NFC_GET_CONFIRM::16	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	110;"	d	line:110
+NFC_IN::15	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	109;"	d	line:109
+NFC_INFO::22	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	116;"	d	line:116
+NFC_PAY::11	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	87;"	d	line:87
+NFC_SET_CONFIRM::17	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	111;"	d	line:111
+NFC_UNIT_NOT_RESPONDING::27	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	124;"	d	line:124
+NONE::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	58;"	d	line:58	file:
+NOT_INIT::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	55;"	d	line:55	file:
 NO_COMMAND::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	71;"	d	line:71
-NO_OF_BILLS::16	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	165;"	d	line:165	file:
-NO_OF_MDB_EVENTS::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	64;"	d	line:64	file:
-NO_PENDING_CMD::0xFFFF	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	58;"	d	line:58	file:
+NO_OF_BILLS::16	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	166;"	d	line:166	file:
+NO_OF_EVENTS::4	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	128;"	d	line:128
+NO_OF_MDB_EVENTS::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	65;"	d	line:65	file:
+NO_PENDING_CMD::0xFFFF	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	59;"	d	line:59	file:
 NUMBER::4	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	67;"	d	line:67
 NVM_PAGE_SIZE::8192	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.h	54;"	d	line:54
 NVM_PROGRAM_PAGE::0xbd040000	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.h	53;"	d	line:53
@@ -246,15 +274,23 @@ NVM_ROW_SIZE::512	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_cod
 Nop::__builtin_nop	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	100;"	d	line:100
 Nop::asm("NOP");	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	167;"	d	line:167
 Nop::asm("nop")	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	194;"	d	line:194
+OFF::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	61;"	d	line:61
+OK::8	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	102;"	d	line:102
 OK_RECEIVED::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	58;"	d	line:58
-PB_DIV::8	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	48;"	d	line:48	file:
+ON::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	60;"	d	line:60
+PAYMENT_METHOD::9	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	85;"	d	line:85
+PB_DIV::8	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	70;"	d	line:70	file:
+PB_DIV::8	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	49;"	d	line:49	file:
 PINS::(CN2_ENABLE|CN3_ENABLE|CN4_ENA	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.h	57;"	d	line:57
-POLL::0x03	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	89;"	d	line:89	file:
-POLL_BYTES::16	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	148;"	d	line:148	file:
-POLL_TIME::(SECOND)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	65;"	d	line:65	file:
-PRESCALE::256	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	49;"	d	line:49	file:
+PIN_LENGTH::8	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	56;"	d	line:56	file:
+POLL::0x03	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	90;"	d	line:90	file:
+POLL_BYTES::16	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	149;"	d	line:149	file:
+POLL_TIME::(SECOND)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	66;"	d	line:66	file:
+PRESCALE::256	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	71;"	d	line:71	file:
+PRESCALE::256	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	50;"	d	line:50	file:
 PRIVATE::static	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	70;"	d	line:70
-PRODUCT_SELECT::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	50;"	d	line:50	file:
+PRODUCT_NO::7	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	101;"	d	line:101
+PRODUCT_SELECT::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	51;"	d	line:51	file:
 PROTECTED	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	69;"	d	line:69
 PSB::PORTGbits.RG12	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.h	63;"	d	line:63
 PTR_BASE::unsignedlong	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	123;"	d	line:123
@@ -263,22 +299,20 @@ PTR_BASE::unsignedshort	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPL
 PTR_BASE::unsignedshort	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	132;"	d	line:132
 PUBLIC::	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	68;"	d	line:68
 PULLUPS::(CN2_PULLUP_ENABLE|CN3_PULLUP_	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.h	58;"	d	line:58
-PollTimerIntHandler	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	698;"	f	line:698	signature:(void)
+PollTimerIntHandler	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	699;"	f	line:699	signature:(void)
 QWORD	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	347;"	t	line:347
 QWORD_VAL	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	545;"	t	line:545
 READ::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.h	69;"	d	line:69
-READY::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	55;"	d	line:55	file:
+READY::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	56;"	d	line:56	file:
 RECV_SMS::5	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	61;"	d	line:61
-RESET::0x00	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	86;"	d	line:86	file:
+RESET::0x00	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	87;"	d	line:87	file:
 RESET::PORTGbits.RG14	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.h	64;"	d	line:64
-RESET_BYTES::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	154;"	d	line:154	file:
-RET::0xAA	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	98;"	d	line:98	file:
-RETRY::4	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	76;"	d	line:76	file:
-RETRY_LIMIT::20	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\NFC.h	54;"	d	line:54
-RETRY_LIMIT::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\NFC.c	74;"	d	line:74	file:
+RESET_BYTES::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	155;"	d	line:155	file:
+RET::0xAA	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	99;"	d	line:99	file:
+RETRY::4	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	77;"	d	line:77	file:
 RETRY_LIMIT::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	77;"	d	line:77
-RETRY_TIME::300*(MILLISECOND)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	66;"	d	line:66	file:
-RETURN_NOTE::0x00	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	144;"	d	line:144	file:
+RETRY_TIME::300*(MILLISECOND)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	67;"	d	line:67	file:
+RETURN_NOTE::0x00	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	145;"	d	line:145	file:
 RIGHT::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.h	66;"	d	line:66
 ROM::const	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	165;"	d	line:165
 ROM::const	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	175;"	d	line:175
@@ -297,48 +331,59 @@ RW::PORTCbits.RC2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_cod
 Reset::SoftReset	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	188;"	d	line:188
 Reset::asm("RESET");	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	169;"	d	line:169
 Reset::asm("reset")	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	179;"	d	line:179
-RetryTimerIntHandler	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	715;"	f	line:715	signature:(void)
+RetryTimerIntHandler	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	716;"	f	line:716	signature:(void)
 Return_Home	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	157;"	f	line:157
-SECOND::SYS_FREQ/PB_DIV/PRESCALE	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	51;"	d	line:51	file:
-SECURITY::0x02	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	88;"	d	line:88	file:
-SECURITY_BYTES::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	151;"	d	line:151	file:
-SECURITY_HIGH_BYTE::0xFF	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	135;"	d	line:135	file:
-SECURITY_LOW_BYTE::0xFF	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	136;"	d	line:136	file:
-SECURITY_POSITION::8	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	104;"	d	line:104	file:
+SECOND::SYS_FREQ/PB_DIV/PRESCALE	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	73;"	d	line:73	file:
+SECOND::SYS_FREQ/PB_DIV/PRESCALE	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	52;"	d	line:52	file:
+SECOND_MOTOR::19	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	113;"	d	line:113
+SECURITY::0x02	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	89;"	d	line:89	file:
+SECURITY_BYTES::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	152;"	d	line:152	file:
+SECURITY_HIGH_BYTE::0xFF	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	136;"	d	line:136	file:
+SECURITY_LOW_BYTE::0xFF	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	137;"	d	line:137	file:
+SECURITY_POSITION::8	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	105;"	d	line:105	file:
+SEND_ERROR::14	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	108;"	d	line:108
 SEND_SMS::6	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	62;"	d	line:62
 SET	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	66;"	e	line:66	enum:_BIT
-SETUP::0x01	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	87;"	d	line:87	file:
-SETUP_BYTES::15	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	147;"	d	line:147	file:
-SETUP_LENGTH::15	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	101;"	d	line:101	file:
+SETUP::0x01	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	88;"	d	line:88	file:
+SETUP_BYTES::15	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	148;"	d	line:148	file:
+SETUP_LENGTH::15	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	102;"	d	line:102	file:
 SHORT	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	349;"	t	line:349
+SMS_PAY::7	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	83;"	d	line:83
 SMS_RECEIVED::4	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	60;"	d	line:60
 SMS_RECV_COMMAND::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	73;"	d	line:73
 SMS_SEND_COMMAND::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	72;"	d	line:72
-STACKER::0x06	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	92;"	d	line:92	file:
-STACKER_BYTES::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	150;"	d	line:150	file:
-STACK_NOTE::0xFF	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	143;"	d	line:143	file:
+STACKER::0x06	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	93;"	d	line:93	file:
+STACKER_BYTES::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	151;"	d	line:151	file:
+STACK_NOTE::0xFF	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	144;"	d	line:144	file:
+START::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	76;"	d	line:76
+SYSTEM_LOCK::10	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	86;"	d	line:86
+SYS_FREQ::(80000000)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	65;"	d	line:65
 ShortDelay	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	121;"	f	line:121	signature:( uint32 DelayCount)
 ShortDelay	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.h	108;"	p	line:108	signature:(uint32 DelayCount)
 Sleep::{__asm__volatile("pwrsav#0");}	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	102;"	d	line:102
 StartTime	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	124;"	l	line:124
 TABLE_SIZE::100	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	54;"	d	line:54
-TRANSFERRED_FROM_RECYCLER::7	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	118;"	d	line:118	file:
+THIRD_MOTOR::20	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	114;"	d	line:114
+TIME_OUT::11	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	105;"	d	line:105
+TRANSFERRED_FROM_RECYCLER::7	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	119;"	d	line:119	file:
 TRAY_MOTOR_CONTROL	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\TrayMotorControl.h	32;"	d	line:32
 TRUE	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	65;"	e	line:65	enum:_BOOL
-TUBE_STATUS::0x02	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	129;"	d	line:129	file:
+TRUE::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	145;"	d	line:145
+TUBE_STATUS::0x02	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	130;"	d	line:130	file:
 Table	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	85;"	t	line:85
-UART1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	95;"	v	line:95
-UART1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	96;"	v	line:96
-UART_INIT::(PORT,BAUD,NO_BITS)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	19;"	d	line:19
+True::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	151;"	d	line:151
+UART1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	90;"	v	line:90
+UART1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	91;"	v	line:91
+UART_INIT::(PORT,BAUD,NO_BITS)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	14;"	d	line:14
 UART_INT	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	98;"	f	line:98
-UART_INT::(PORT,PRIORITY)void__ISR(PORT#	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	21;"	d	line:21
-UART_INT_TEST::(PORT)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	64;"	d	line:64
-UART_SEND_CHAR::(PORT)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	34;"	d	line:34
-UART_SEND_CHAR_PROTO::(PORT)voidhal_sendChar_##PORT(	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	23;"	d	line:23
-UART_SEND_STRING	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	164;"	f	line:164
+UART_INT::(PORT,PRIORITY)void__ISR(PORT#	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	16;"	d	line:16
+UART_INT_TEST::(PORT)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	59;"	d	line:59
+UART_SEND_CHAR::(PORT)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	29;"	d	line:29
+UART_SEND_CHAR_PROTO::(PORT)voidhal_sendChar_##PORT(	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	18;"	d	line:18
+UART_SEND_STRING	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	178;"	f	line:178
 UART_SEND_STRING	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	32;"	f	line:32
-UART_SEND_STRING::(PORT)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	50;"	d	line:50
-UART_SEND_STRING_PROTO::(PORT)voidhal_sendString_##POR	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	35;"	d	line:35
+UART_SEND_STRING::(PORT)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	45;"	d	line:45
+UART_SEND_STRING_PROTO::(PORT)voidhal_sendString_##POR	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	30;"	d	line:30
 UB	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	153;"	m	line:153	struct:<anonymous>::__PACKED
 UB	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	199;"	m	line:199	struct:<anonymous>::__PACKED
 UB	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	414;"	m	line:414	struct:<anonymous>::__PACKED
@@ -358,10 +403,12 @@ UINT8	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\incl
 UINT8_BITS	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	111;"	t	line:111
 UINT8_VAL	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	111;"	t	line:111
 UPDATE::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	60;"	d	line:60
+UPDATE_DATA::2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	96;"	d	line:96
+UPDATE_VARS::3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	79;"	d	line:79
 UW	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	261;"	m	line:261	struct:<anonymous>::__PACKED
 UW	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	475;"	m	line:475	struct:<anonymous>::__PACKED
 VMSerial	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	59;"	v	line:59
-VMSerial	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	60;"	v	line:60
+VMSerial	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	92;"	v	line:92
 VOID	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	337;"	t	line:337
 Val	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	115;"	m	line:115
 Val	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	147;"	m	line:147
@@ -379,11 +426,15 @@ VendMotor2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1
 VendMotor3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\TrayMotorControl.c	82;"	f	line:82
 VendMotor3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\TrayMotorControl.h	71;"	p	line:71	signature:()
 WAIT::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	59;"	d	line:59
+WAIT_AMOUNT::6	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	82;"	d	line:82
+WAIT_MONEY::4	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	80;"	d	line:80
+WAIT_PRODUCT::5	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	81;"	d	line:81
 WORD	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	343;"	t	line:343
 WORD_BITS	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	398;"	t	line:398
 WORD_SIZE::10	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	55;"	d	line:55
 WORD_VAL	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	398;"	t	line:398
 WRITE::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.h	70;"	d	line:70
+WRONG::12	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	106;"	d	line:106
 X	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	332;"	v	line:332
 Y	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	332;"	v	line:332
 _BIT	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	66;"	g	line:66
@@ -431,10 +482,10 @@ __PACKED	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\i
 __PACKED	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	478;"	s	line:478
 __PACKED	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	59;"	d	line:59
 __attribute__::(a)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	154;"	d	line:154
-addData	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	116;"	f	line:116	signature:(uint32 trayNum,uint32 num,char name[],uint32 amount,uint32 valDec,uint32 valCent)
+addData	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	117;"	f	line:117	signature:(uint32 trayNum,uint32 num,char name[],uint32 amount,uint32 valDec,uint32 valCent)
 addData	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	118;"	p	line:118	signature:(uint32 size,uint32 num,char name[],uint32 amount,uint32 valDec,uint32 valCent)
-address	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	187;"	m	line:187	file:
-amount	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	73;"	v	line:73
+address	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	188;"	m	line:188	file:
+amount	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	78;"	v	line:78
 amount	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	82;"	m	line:82
 arr	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	70;"	v	line:70
 b0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	102;"	m	line:102
@@ -701,10 +752,10 @@ b9	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include
 b9	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	390;"	m	line:390	struct:<anonymous>::__PACKED
 b9	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	433;"	m	line:433	struct:<anonymous>::__PACKED
 b9	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	489;"	m	line:489	struct:<anonymous>::__PACKED
-balance	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	75;"	v	line:75
-bill	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	501;"	l	line:501
-billIndex	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	208;"	v	line:208
-billsAccepted	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	207;"	v	line:207
+balance	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	80;"	v	line:80
+bill	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	502;"	l	line:502
+billIndex	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	209;"	v	line:209
+billsAccepted	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	208;"	v	line:208
 bits	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	110;"	m	line:110
 bits	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	140;"	m	line:140
 bits	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	181;"	m	line:181
@@ -714,8 +765,9 @@ bits	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\inclu
 bits	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	397;"	m	line:397
 bits	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	456;"	m	line:456
 bits	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	544;"	m	line:544
-board_init	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	198;"	f	line:198
-board_init	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	87;"	p	line:87	file:
+board_init	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	102;"	p	line:102	file:
+board_init	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	213;"	f	line:213
+bool	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	169;"	t	line:169
 but1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	299;"	l	line:299
 but2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	300;"	l	line:300
 but3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	301;"	l	line:301
@@ -725,281 +777,285 @@ byte	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\inclu
 byte	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	201;"	m	line:201
 byte	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	378;"	m	line:378
 byte	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	416;"	m	line:416
-canAcceptBills	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	77;"	v	line:77
-changeState	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	652;"	f	line:652	signature:(uint8 nextStateId)
-changeState	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	89;"	p	line:89	file:	signature:(uint8 nextStateId)
-checkSum	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	360;"	l	line:360
+canAcceptBills	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	85;"	v	line:85
+changeState	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	104;"	p	line:104	file:	signature:(uint8 nextStateId)
+changeState	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	740;"	f	line:740	signature:(uint8 nextStateId)
+checkSum	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	361;"	l	line:361
 check_key::switch(key){	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.h	157;"	d	line:157
 chk	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	298;"	l	line:298
-closeGSMTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	209;"	f	line:209
-closeGSMTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\NFC.c	111;"	f	line:111
-closePollTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	230;"	p	line:230	file:
-closePollTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	657;"	f	line:657
-closeRetryTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	228;"	p	line:228	file:
-closeRetryTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	643;"	f	line:643
-cnt	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	255;"	l	line:255
-command	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	377;"	l	line:377
-compareString	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	127;"	p	line:127	file:	signature:(const char * string)
-compareString	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	190;"	f	line:190	signature:(const char * string)
-contentLength	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	205;"	v	line:205
-count	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	77;"	l	line:77
-count	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	68;"	v	line:68
-cur	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	429;"	l	line:429
-currencyCode	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	476;"	l	line:476
-currencyType	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	191;"	m	line:191	file:
-currentCommand	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	196;"	v	line:196
-currentInit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	189;"	m	line:189	file:
-currentPeripheral	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	195;"	v	line:195
+closeGSMTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	156;"	p	line:156	file:
+closeGSMTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	263;"	f	line:263
+closePollTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	231;"	p	line:231	file:
+closePollTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	658;"	f	line:658
+closeRetryTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	229;"	p	line:229	file:
+closeRetryTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	644;"	f	line:644
+cnt	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	256;"	l	line:256
+command	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	378;"	l	line:378
+compareString	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	140;"	p	line:140	file:	signature:(const char * string)
+compareString	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	244;"	f	line:244	signature:(const char * string)
+contentLength	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	206;"	v	line:206
+count	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	78;"	l	line:78
+cur	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	430;"	l	line:430
+currencyCode	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	477;"	l	line:477
+currencyType	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	192;"	m	line:192	file:
+currentCommand	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	197;"	v	line:197
+currentInit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	190;"	m	line:190	file:
+currentPeripheral	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	196;"	v	line:196
 cyclesRequiredForEntireDelay	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\TimeDelay.c	180;"	l	line:180
 cyclesRequiredForEntireDelay	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\TimeDelay.c	71;"	l	line:71
 dat	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	401;"	l	line:401
-data	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	677;"	l	line:677
+data	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	678;"	l	line:678
 dataDB	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	53;"	v	line:53
 databuff	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.c	53;"	v	line:53
-dec	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	418;"	l	line:418
+dec	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	511;"	l	line:511
 dec	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	159;"	l	line:159
-deque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	868;"	f	line:868
-deque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	91;"	p	line:91	file:
+deque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	106;"	p	line:106	file:
+deque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	962;"	f	line:962
 disable	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	110;"	f	line:110
 done	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	73;"	v	line:73
 dummy	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	290;"	l	line:290
 dword	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	256;"	m	line:256
 dword	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	470;"	m	line:470
 enable	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	106;"	f	line:106
-enque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	857;"	f	line:857	signature:(uint8 eventId)
-enteredValue	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	76;"	v	line:76
+enque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	951;"	f	line:951	signature:(uint8 eventId)
+enque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	199;"	p	line:199	signature:(uint8 eventId)
+enteredValue	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	84;"	v	line:84
 erase_flash_page	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.c	101;"	f	line:101	signature:(uint32 page)
 erase_flash_page	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.h	94;"	p	line:94	signature:(uint32 number)
 event	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	55;"	v	line:55
-eventId	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	551;"	l	line:551
+eventId	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	552;"	l	line:552
+false::0	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	136;"	d	line:136
 far	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	186;"	d	line:186
-fill	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	254;"	f	line:254
+fill	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	255;"	f	line:255
 fill	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	25;"	p	line:25	file:
 first_idx	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	16;"	v	line:16
-flashDB	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	147;"	f	line:147
+flashDB	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	148;"	f	line:148
 flashDB	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	120;"	p	line:120	signature:()
 flash_page_data	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.c	83;"	f	line:83	signature:(uint32* data, uint32 length)
 flash_page_data	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.h	92;"	p	line:92	signature:(uint32* data, uint32 length)
 flash_row_data	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.c	64;"	f	line:64	signature:(uint32* data, uint32 length)
 flash_row_data	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.h	91;"	p	line:91	signature:(uint32* data, uint32 length)
-fsm_update	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	182;"	f	line:182
-g_EventQueue	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	64;"	v	line:64
-genSMSPIN	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	890;"	f	line:890
-genSMSPIN	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	94;"	p	line:94	file:
-generateCheckSum	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	237;"	p	line:237	file:	signature:(unsigned int length,unsigned int * buffer)
-generateCheckSum	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	358;"	f	line:358	signature:(unsigned int length,unsigned int * buffer)
+fsm_update	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	183;"	f	line:183
+g_EventQueue	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	68;"	v	line:68
+genSMSPIN	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	109;"	p	line:109	file:
+genSMSPIN	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	984;"	f	line:984
+generateCheckSum	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	238;"	p	line:238	file:	signature:(unsigned int length,unsigned int * buffer)
+generateCheckSum	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	359;"	f	line:359	signature:(unsigned int length,unsigned int * buffer)
 getGSMStatus	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	195;"	f	line:195
-getGSMStatus	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	102;"	p	line:102	signature:()
-getNext	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	880;"	f	line:880	signature:(uint8 index)
-getNext	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	93;"	p	line:93	file:	signature:(uint8 index)
-getNextPeripheral	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	242;"	p	line:242	file:
-getNextPeripheral	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	540;"	f	line:540
-getNoOfTrays	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	177;"	f	line:177
-getTable	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	138;"	f	line:138	signature:(uint32 trayNum,uint32 num)
+getNext	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	108;"	p	line:108	file:	signature:(uint8 index)
+getNext	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	974;"	f	line:974	signature:(uint8 index)
+getNextPeripheral	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	243;"	p	line:243	file:
+getNextPeripheral	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	541;"	f	line:541
+getNoOfTrays	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	178;"	f	line:178
+getTable	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	139;"	f	line:139	signature:(uint32 trayNum,uint32 num)
 getTable	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	119;"	p	line:119	signature:(uint32 trayNum,uint32 num)
-getTraySize	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	172;"	f	line:172
-getVMSerial	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	166;"	f	line:166
+getTraySize	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	173;"	f	line:173
+getVMSerial	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	167;"	f	line:167
 getVMSerial	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	124;"	p	line:124	signature:()
+globalMsg	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	93;"	v	line:93
 graphic	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\graphics.h	6;"	v	line:6
-gsmCommandIndex	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	78;"	v	line:78
-gsmCurrentCommand	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	79;"	v	line:79
-gsmDeque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	138;"	p	line:138	file:
-gsmDeque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	465;"	f	line:465
-gsmEnque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	454;"	f	line:454	signature:(uint8 eventId)
-gsmEnque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	120;"	p	line:120	signature:(uint8 eventId)
-gsmEventQueue	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	90;"	v	line:90
-gsmGetNext	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	137;"	p	line:137	file:	signature:(uint8 index)
-gsmGetNext	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	476;"	f	line:476	signature:(uint8 index)
-gsmInit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	153;"	f	line:153
-gsmInit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	117;"	p	line:117	signature:()
-gsmIntHandler	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	214;"	f	line:214	signature:(void)
-gsmIntHandler	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\NFC.c	116;"	f	line:116	signature:(void)
-gsmLastCommand	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	86;"	v	line:86
-gsmNextEvent	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	234;"	l	line:234
-gsmPaymentInfo	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	107;"	v	line:107
-gsmProcessPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	130;"	p	line:130	file:
-gsmProcessPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	297;"	f	line:297
-gsmQueueHead	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	91;"	v	line:91
-gsmQueueTail	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	92;"	v	line:92
-gsmReadSMS	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	102;"	v	line:102
-gsmRecvSMS	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	134;"	p	line:134	file:
-gsmRecvSMS	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	412;"	f	line:412
-gsmRetrys	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	85;"	v	line:85
-gsmRetrys	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\NFC.c	54;"	v	line:54
-gsmRxBuffer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	76;"	v	line:76
-gsmRxBufferFilled	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	77;"	v	line:77
-gsmSMSLine	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	103;"	v	line:103
-gsmSendInitCommands	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	132;"	p	line:132	file:
-gsmSendInitCommands	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	344;"	f	line:344
-gsmSendPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	131;"	p	line:131	file:	signature:(char * string)
-gsmSendPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	334;"	f	line:334	signature:(char * string)
-gsmSendSMS	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	133;"	p	line:133	file:
-gsmSendSMS	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	365;"	f	line:365
-gsmSetSmsParameters	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	339;"	f	line:339	signature:(char* msg, unsigned int len)
-gsmSetSmsParameters	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	119;"	p	line:119	signature:(char* msg, unsigned int len)
-gsmSmsLength	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	98;"	v	line:98
-gsmSmsMsg	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	97;"	v	line:97
-gsmSmsNumber	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	101;"	v	line:101
-gsmSmsRecvCmdCharArray	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	104;"	v	line:104
-gsmState	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	89;"	v	line:89
-gsmStateMachine	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	232;"	f	line:232
-gsmStateMachine	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	118;"	p	line:118	signature:()
-gsmStatus	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	82;"	v	line:82
+gsmCommandIndex	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	87;"	v	line:87
+gsmCurrentCommand	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	88;"	v	line:88
+gsmDeque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	151;"	p	line:151	file:
+gsmDeque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	558;"	f	line:558
+gsmEnque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	547;"	f	line:547	signature:(uint8 eventId)
+gsmEnque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	125;"	p	line:125	signature:(uint8 eventId)
+gsmEventNext	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	288;"	l	line:288
+gsmEventQueue	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	99;"	v	line:99
+gsmGetNext	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	150;"	p	line:150	file:	signature:(uint8 index)
+gsmGetNext	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	569;"	f	line:569	signature:(uint8 index)
+gsmInit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	166;"	f	line:166
+gsmInit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	122;"	p	line:122	signature:()
+gsmIntHandler	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	268;"	f	line:268	signature:(void)
+gsmLastCommand	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	95;"	v	line:95
+gsmPaymentInfo	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	116;"	v	line:116
+gsmProcessPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	143;"	p	line:143	file:
+gsmProcessPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	351;"	f	line:351
+gsmQueueHead	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	100;"	v	line:100
+gsmQueueTail	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	101;"	v	line:101
+gsmReadSMS	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	111;"	v	line:111
+gsmRecvSMS	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	147;"	p	line:147	file:
+gsmRecvSMS	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	505;"	f	line:505
+gsmRetrys	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	94;"	v	line:94
+gsmRxBuffer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	85;"	v	line:85
+gsmRxBufferFilled	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	86;"	v	line:86
+gsmSMSLine	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	112;"	v	line:112
+gsmSendInitCommands	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	145;"	p	line:145	file:
+gsmSendInitCommands	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	409;"	f	line:409
+gsmSendPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	144;"	p	line:144	file:	signature:(char * string)
+gsmSendPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	399;"	f	line:399	signature:(char * string)
+gsmSendSMS	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	146;"	p	line:146	file:
+gsmSendSMS	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	439;"	f	line:439
+gsmSetSmsParameters	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	404;"	f	line:404	signature:(char* msg, unsigned int len)
+gsmSetSmsParameters	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	124;"	p	line:124	signature:(char* msg, unsigned int len)
+gsmSmsLength	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	107;"	v	line:107
+gsmSmsMsg	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	106;"	v	line:106
+gsmSmsNumber	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	110;"	v	line:110
+gsmSmsRecvCmdCharArray	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	113;"	v	line:113
+gsmState	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	98;"	v	line:98
+gsmStateMachine	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	286;"	f	line:286
+gsmStateMachine	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GSM.h	123;"	p	line:123	signature:()
+gsmStatus	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	91;"	v	line:91
 gsm_count	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	10;"	v	line:10
 gsm_status	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	9;"	v	line:9
 hal_allUARTInit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	20;"	f	line:20	signature:(void)
-hal_allUARTInit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	94;"	p	line:94	signature:(void)
-hal_mdbInit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	606;"	f	line:606	signature:(void)
+hal_allUARTInit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	89;"	p	line:89	signature:(void)
+hal_mdbInit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	607;"	f	line:607	signature:(void)
 hal_uartWriteNumber	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	147;"	f	line:147	signature:(unsigned int no)
-hal_uartWriteNumber	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	99;"	p	line:99	signature:(unsigned int no)
+hal_uartWriteNumber	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.h	94;"	p	line:94	signature:(unsigned int no)
 high	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	205;"	m	line:205	struct:<anonymous>::__PACKED
 high	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	420;"	m	line:420	struct:<anonymous>::__PACKED
-i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	191;"	l	line:191
-i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	324;"	l	line:324
-i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	415;"	l	line:415
-i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	327;"	l	line:327
-i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	359;"	l	line:359
-i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	484;"	l	line:484
-i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	499;"	l	line:499
-i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	532;"	l	line:532
-i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	120;"	l	line:120
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	245;"	l	line:245
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	367;"	l	line:367
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	379;"	l	line:379
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	388;"	l	line:388
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	486;"	l	line:486
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	508;"	l	line:508
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	328;"	l	line:328
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	360;"	l	line:360
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	485;"	l	line:485
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	500;"	l	line:500
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	533;"	l	line:533
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	121;"	l	line:121
 i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	61;"	v	line:61
-i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	76;"	l	line:76
-i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	370;"	l	line:370
-i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	533;"	l	line:533
-i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	893;"	l	line:893
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	77;"	l	line:77
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	388;"	l	line:388
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	561;"	l	line:561
+i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	986;"	l	line:986
 i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.c	181;"	l	line:181
 i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.c	199;"	l	line:199
 i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	402;"	l	line:402
 i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	157;"	l	line:157
 i	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	302;"	l	line:302
-idx	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	118;"	l	line:118
-initCommands	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	213;"	v	line:213
-isGsmInitialized	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	108;"	v	line:108
-j	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	485;"	l	line:485
+idx	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	119;"	l	line:119
+initCommands	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	214;"	v	line:214
+int16	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	166;"	t	line:166
+int32	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	168;"	t	line:168
+int8	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	164;"	t	line:164
+isGsmInitialized	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	117;"	v	line:117
+j	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	486;"	l	line:486
 j	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	62;"	v	line:62
-j	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	97;"	l	line:97
-j	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	533;"	l	line:533
+j	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	98;"	l	line:98
 j	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	402;"	l	line:402
 k	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	63;"	v	line:63
-k	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	98;"	l	line:98
+k	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	99;"	l	line:99
 key	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.h	75;"	v	line:75
+keyPressCount	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	73;"	v	line:73
 keypad_init	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	90;"	f	line:90
 keypad_init	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.h	169;"	p	line:169	signature:()
 keypad_pole	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	287;"	f	line:287
 keypad_pole	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.h	170;"	p	line:170	signature:()
-keyuse	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	70;"	v	line:70
-last	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	372;"	l	line:372
-lastPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	204;"	v	line:204
+keyuse	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	74;"	v	line:74
+last	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	373;"	l	line:373
+lastPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	205;"	v	line:205
 lcdfill	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	418;"	f	line:418	signature:(unsigned char n)
 lcdpos	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	373;"	f	line:373	signature:(void)
 lcdwc	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	335;"	f	line:335	signature:(unsigned char com)
 lcdwd	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	355;"	f	line:355	signature:(unsigned char dat)
 lcdwd	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.h	109;"	p	line:109	signature:(unsigned char dat)
 len	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	64;"	v	line:64
-length	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	268;"	l	line:268
-length	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	326;"	l	line:326
-lengthBillsAccepted	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	209;"	v	line:209
-lengthRx	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	202;"	v	line:202
-lengthTx	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	203;"	v	line:203
+length	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	269;"	l	line:269
+length	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	327;"	l	line:327
+lengthBillsAccepted	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	210;"	v	line:210
+lengthRx	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	203;"	v	line:203
+lengthTx	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	204;"	v	line:204
 low	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	204;"	m	line:204	struct:<anonymous>::__PACKED
 low	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	419;"	m	line:419	struct:<anonymous>::__PACKED
-main	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	135;"	f	line:135	signature:(void)
+main	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	152;"	f	line:152	signature:(void)
 max	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	325;"	l	line:325
-mdbBillValue	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	211;"	v	line:211
-mdbDeque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	223;"	p	line:223	file:
-mdbDeque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	748;"	f	line:748
-mdbEnque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	222;"	p	line:222	file:	signature:(uint8 eventId)
-mdbEnque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	737;"	f	line:737	signature:(uint8 eventId)
-mdbGetNext	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	224;"	p	line:224	file:	signature:(uint8 index)
-mdbGetNext	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	760;"	f	line:760	signature:(uint8 index)
-mdbPacketRx	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	183;"	v	line:183
-mdbPacketTx	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	182;"	v	line:182
-mdbQueue	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	176;"	v	line:176
-mdbQueueHead	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	177;"	v	line:177
-mdbQueueTail	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	178;"	v	line:178
-mdbState	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	179;"	v	line:179
-mdbStateMachine	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	549;"	f	line:549
+mdbBillValue	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	212;"	v	line:212
+mdbDeque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	224;"	p	line:224	file:
+mdbDeque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	749;"	f	line:749
+mdbEnque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	223;"	p	line:223	file:	signature:(uint8 eventId)
+mdbEnque	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	738;"	f	line:738	signature:(uint8 eventId)
+mdbGetNext	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	225;"	p	line:225	file:	signature:(uint8 index)
+mdbGetNext	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	761;"	f	line:761	signature:(uint8 index)
+mdbPacketRx	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	184;"	v	line:184
+mdbPacketTx	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	183;"	v	line:183
+mdbQueue	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	177;"	v	line:177
+mdbQueueHead	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	178;"	v	line:178
+mdbQueueTail	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	179;"	v	line:179
+mdbState	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	180;"	v	line:180
+mdbStateMachine	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	550;"	f	line:550
 memcmppgm2ram::(a,b,c)memcmp(a,b,c)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	139;"	d	line:139
 memcpypgm2ram::(a,b,c)memcpy(a,b,c)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	141;"	d	line:141
 motor	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	13;"	v	line:13
-motor_no	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	79;"	v	line:79
+motor_no	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	89;"	v	line:89
 motor_response	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	12;"	v	line:12
-name	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	156;"	l	line:156
+name	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	170;"	l	line:170
 name	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	80;"	m	line:80
-nextEvent	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	164;"	l	line:164
-nm	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	369;"	l	line:369
-noOfPeripherals	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	199;"	v	line:199
+nextEvent	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	178;"	l	line:178
+nm	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	387;"	l	line:387
+noOfPeripherals	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	200;"	v	line:200
 noOftrays	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	57;"	v	line:57
-num	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	197;"	l	line:197
-num	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	86;"	l	line:86
+num	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	198;"	l	line:198
+num	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	87;"	l	line:87
 number	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	81;"	m	line:81
-onStateEntry	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	660;"	f	line:660	signature:(uint8 stateId)
-onStateEntry	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	92;"	p	line:92	file:	signature:(uint8 stateId)
-onStateExit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	782;"	f	line:782	signature:(uint8 stateId)
-onStateExit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	90;"	p	line:90	file:	signature:(uint8 stateId)
+onStateEntry	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	107;"	p	line:107	file:	signature:(uint8 stateId)
+onStateEntry	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	748;"	f	line:748	signature:(uint8 stateId)
+onStateExit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	105;"	p	line:105	file:	signature:(uint8 stateId)
+onStateExit	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	876;"	f	line:876	signature:(uint8 stateId)
 pagebuff	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.c	52;"	v	line:52
-pendingCommand	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	197;"	v	line:197
-peripheralDetails	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	192;"	t	line:192	file:
-peripherals	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	200;"	v	line:200
+pendingCommand	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	198;"	v	line:198
+peripheralDetails	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	193;"	t	line:193	file:
+peripherals	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	201;"	v	line:201
 persistent	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	185;"	d	line:185
-pollNFC	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\NFC.c	84;"	f	line:84
-preparePacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	235;"	p	line:235	file:	signature:(unsigned int command,unsigned int unit)
-preparePacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	265;"	f	line:265	signature:(unsigned int command,unsigned int unit)
-process	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	249;"	f	line:249
+pinMatch	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	562;"	l	line:562
+preparePacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	236;"	p	line:236	file:	signature:(unsigned int command,unsigned int unit)
+preparePacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	266;"	f	line:266	signature:(unsigned int command,unsigned int unit)
+process	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	250;"	f	line:250
 process	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	123;"	p	line:123	signature:()
-processRxPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	240;"	p	line:240	file:
-processRxPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	446;"	f	line:446
-product_no	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	72;"	v	line:72
-queueHead	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	65;"	v	line:65
-queueTail	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	66;"	v	line:66
+processRxPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	241;"	p	line:241	file:
+processRxPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	447;"	f	line:447
+product_no	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	77;"	v	line:77
+queueHead	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	69;"	v	line:69
+queueTail	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	70;"	v	line:70
 read_flash_page	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.c	197;"	f	line:197	signature:(uint32 length, uint32 page)
 read_flash_page	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.h	102;"	p	line:102	signature:(uint32 length, uint32 page)
 read_flash_row	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.c	179;"	f	line:179	signature:(uint32 length, uint32 page, uint32 row)
 read_flash_row	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.h	101;"	p	line:101	signature:(uint32 length, uint32 page, uint32 row)
 read_flash_word	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.c	166;"	f	line:166	signature:(uint32 address)
 read_flash_word	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.h	100;"	p	line:100	signature:(uint32 address)
-receivePacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	238;"	p	line:238	file:	signature:(unsigned int _9bitData)
-receivePacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	368;"	f	line:368	signature:(unsigned int _9bitData)
+receivePacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	239;"	p	line:239	file:	signature:(unsigned int _9bitData)
+receivePacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	369;"	f	line:369	signature:(unsigned int _9bitData)
 resposnse	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	15;"	v	line:15
-retry	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	241;"	p	line:241	file:
-retry	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	530;"	f	line:530
+retry	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	242;"	p	line:242	file:
+retry	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	531;"	f	line:531
 rom	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	166;"	d	line:166
 rx	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	66;"	v	line:66
-scalingFactor	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	477;"	l	line:477
+rxCRLF	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	120;"	v	line:120
+scalingFactor	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	478;"	l	line:478
 second_idx	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	17;"	v	line:17
 select_key::(ROWX)ALL_SET	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.h	141;"	d	line:141
 select_mode	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	114;"	f	line:114	signature:(uint8 mode)
-sendAck	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	243;"	p	line:243	file:
-sendAck	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	347;"	f	line:347
-sendBillsAccepted	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	210;"	v	line:210
-sendMdbPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	236;"	p	line:236	file:	signature:(unsigned int command,unsigned int unit)
-sendMdbPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	324;"	f	line:324	signature:(unsigned int command,unsigned int unit)
-serial	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	758;"	l	line:758
-serial	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	892;"	l	line:892
-setNoOfTrays	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	161;"	f	line:161	signature:(uint32 num)
+sendAck	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	244;"	p	line:244	file:
+sendAck	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	348;"	f	line:348
+sendBillsAccepted	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	211;"	v	line:211
+sendMdbPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	237;"	p	line:237	file:	signature:(unsigned int command,unsigned int unit)
+sendMdbPacket	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	325;"	f	line:325	signature:(unsigned int command,unsigned int unit)
+serial	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	852;"	l	line:852
+setNoOfTrays	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	162;"	f	line:162	signature:(uint32 num)
 setNoOfTrays	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	122;"	p	line:122	signature:(uint32 num)
-setStatus	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	239;"	p	line:239	file:
-setStatus	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	428;"	f	line:428
-setTraySize	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	156;"	f	line:156	signature:(uint32 size)
+setStatus	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	240;"	p	line:240	file:
+setStatus	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	429;"	f	line:429
+setTraySize	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	157;"	f	line:157	signature:(uint32 size)
 setTraySize	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	121;"	p	line:121	signature:(uint32 size)
-startGSMTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	142;"	p	line:142	file:
-startGSMTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	204;"	f	line:204
-startGSMTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\NFC.c	106;"	f	line:106
-startGSMTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\NFC.c	62;"	p	line:62	file:
-startPollTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	229;"	p	line:229	file:
-startPollTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	650;"	f	line:650
-startRetryTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	227;"	p	line:227	file:
-startRetryTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	636;"	f	line:636
+smsPayment	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	569;"	l	line:569
+smsState	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	552;"	l	line:552
+startGSMTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	155;"	p	line:155	file:
+startGSMTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	258;"	f	line:258
+startPollTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	230;"	p	line:230	file:
+startPollTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	651;"	f	line:651
+startResponse	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	121;"	v	line:121
+startRetryTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	228;"	p	line:228	file:
+startRetryTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	637;"	f	line:637
 start_LCD	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.c	88;"	f	line:88
 start_LCD	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\LCD.h	106;"	p	line:106	signature:()
-state	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	63;"	v	line:63
-stateMachine	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	211;"	f	line:211	signature:(uint8 eventId)
-stateMachine	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	88;"	p	line:88	file:	signature:(uint8 eventId)
-status	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	188;"	m	line:188	file:
-statusOfBill	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	502;"	l	line:502
-stopGSMTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	143;"	p	line:143	file:
-stopGSMTimer	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\NFC.c	63;"	p	line:63	file:
+state	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	67;"	v	line:67
+stateMachine	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	103;"	p	line:103	file:	signature:(uint8 eventId)
+stateMachine	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	229;"	f	line:229	signature:(uint8 eventId)
+status	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	189;"	m	line:189	file:
+statusOfBill	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	503;"	l	line:503
 strcatpgm2ram::(a,b)strcat(a,b)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	147;"	d	line:147
 strchrpgm::(a,b)strchr(a,b)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	146;"	d	line:146
 strcmppgm2ram::(a,b)strcmp(a,b)	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\Compiler.h	140;"	d	line:140
@@ -1011,29 +1067,37 @@ sw1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physic
 sw2	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	295;"	l	line:295
 sw3	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	296;"	l	line:296
 tbl	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	101;"	v	line:101
-temp	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	678;"	l	line:678
-thou	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	417;"	l	line:417
-timeWithoutAns	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	190;"	m	line:190	file:
-tmp	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	122;"	l	line:122
-tmp	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	206;"	l	line:206
-tmp	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	75;"	l	line:75
-tmp	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	372;"	l	line:372
-tmpChar	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	176;"	l	line:176
-tot	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	898;"	l	line:898
-total	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	74;"	v	line:74
+temp	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	679;"	l	line:679
+thou	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	418;"	l	line:418
+timeWithoutAns	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	191;"	m	line:191	file:
+tmp	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	123;"	l	line:123
+tmp	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	207;"	l	line:207
+tmp	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	76;"	l	line:76
+tmp	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	390;"	l	line:390
+tmpChar	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	190;"	l	line:190
+tmpCharArray	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	485;"	l	line:485
+tmpPtr	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	487;"	l	line:487
+tot	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	991;"	l	line:991
+total	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	79;"	v	line:79
 traySize	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	56;"	v	line:56
 tray_init	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\TrayMotorControl.c	51;"	f	line:51
+true::1	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	139;"	d	line:139
 type	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\keys.c	72;"	v	line:72
+uint16	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	165;"	t	line:165
+uint32	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	167;"	t	line:167
+uint8	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\global.h	163;"	t	line:163
 update	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	54;"	v	line:54
-val	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	470;"	l	line:470
-val	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	753;"	l	line:753
+val	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\GSM.c	563;"	l	line:563
+val	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\MDB.c	754;"	l	line:754
 val	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	67;"	v	line:67
-val	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	873;"	l	line:873
+val	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	967;"	l	line:967
 val	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	155;"	l	line:155
-valC	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	384;"	l	line:384
+valC	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	402;"	l	line:402
 valCent	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	84;"	m	line:84
-valD	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	383;"	l	line:383
+valD	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	401;"	l	line:401
 valDec	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\ProductDB.h	83;"	m	line:83
+vendingMachineSerial	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\main.c	94;"	v	line:94
+vmserial	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	74;"	l	line:74
 word	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.c	168;"	l	line:168
 word	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	194;"	m	line:194
 word	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\include\GenericTypeDefs.h	263;"	m	line:263
@@ -1047,12 +1111,12 @@ write_flash_row	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes
 write_flash_row	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.h	97;"	p	line:97	signature:(uint32* data, uint32 length, uint32 page, uint32 row)
 write_flash_word	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.c	111;"	f	line:111	signature:(uint32 data, uint32 address)
 write_flash_word	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.h	96;"	p	line:96	signature:(uint32 data, uint32 address)
-x	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	347;"	l	line:347
-x	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	392;"	l	line:392
+x	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	348;"	l	line:348
+x	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	393;"	l	line:393
 x	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Logic\ProductDB.c	69;"	v	line:69
 x	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.c	65;"	l	line:65
 x	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\Flash_Controller.c	84;"	l	line:84
 x	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	106;"	l	line:106
 x	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Physical\UART.c	49;"	l	line:49
-y	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	347;"	l	line:347
-y	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	392;"	l	line:392
+y	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	348;"	l	line:348
+y	C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\Common\skpic32_glcd.c	393;"	l	line:393

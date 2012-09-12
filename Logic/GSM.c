@@ -187,9 +187,22 @@ UART_INT(_UART_4, ipl2){  //gsm - UART interrupt
 		{                     
 			closeGSMTimer();
 			char tmpChar=UARTGetDataByte(GSM_PORT);
-			hal_sendChar_UART1(tmpChar);
+			//hal_sendChar_UART1(tmpChar);
 			//processing event - call gsm process packet 
 			//<CR><LF> COMMAND <CR><LF>
+			if(gsmReadSMS){
+				if(tmpChar == '\r'){
+					rxCRLF = 1;
+				}
+				else if(tmpChar == '\n' && rxCRLF == 1){
+					gsmProcessPacket();
+					rxCRLF = 0;
+				}
+				else{
+					gsmRxBuffer[gsmRxBufferFilled] = tmpChar;
+					gsmRxBufferFilled++;
+				}
+			}
 			if(tmpChar == '\r'){
 				rxCRLF = 1;
 				return;
@@ -377,6 +390,7 @@ void gsmProcessPacket(){
 		}
 		gsmPaymentInfo[gsmSMSLine][i] = '\0';
 		gsmSMSLine++;
+		if(gsmSMSLine == 4) gsmReadSMS = 0;
 	}
 	gsmRxBufferFilled = 0;
 }
@@ -512,7 +526,7 @@ void gsmRecvSMS(){
 	}
 	else if(gsmCommandIndex == 1){   //delete the sms
 	
-		//enque(GSM_UNIT_SMS_RECVD);
+		enque(GSM_UNIT_SMS_RECVD);
 		gsmSMSLine = 0;
 		gsmSmsRecvCmdCharArray[6] = 'D';
 		gsmSendPacket(gsmSmsRecvCmdCharArray);

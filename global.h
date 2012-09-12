@@ -54,7 +54,7 @@
 
 
 //for console
-#define SHOW_MESSAGES
+//#define SHOW_MESSAGES
 
 
 #define ON  1 
