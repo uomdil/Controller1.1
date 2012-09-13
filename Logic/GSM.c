@@ -364,6 +364,7 @@ void gsmProcessPacket(){
 	else if(compareString("+CMTI: \"SM\"")){   // +CMTI:”SM”,3
 		//get the number of the SMS
 		unsigned int i=0;
+		gsmSmsNumber = 0;
 		for(i=12;i<gsmRxBufferFilled;i++){
 			gsmSmsNumber = gsmSmsNumber*10 + (gsmRxBuffer[i] - '0');
 		}

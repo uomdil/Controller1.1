@@ -145,9 +145,8 @@ char* genSMSPIN();
 
 //#define MONEY_STATE 
 //#define SMS_STATE  
-
-
 //#define DEBUG 
+
 
 int main(void)
 {
@@ -167,8 +166,8 @@ int main(void)
 	setTraySize(3);
     setNoOfTrays(2);
 	
-	char name[]="Dilshan";
-	addData(1,1,name,5,500,0);
+	char name[]="Soda";
+	addData(1,1,name,5,50,0);
 	
 	flashDB();
 	InitDB();
@@ -386,18 +385,20 @@ void stateMachine(uint8 eventId){
 		 		*/
 				uint32 *nm=tbl[product_no].name;
 				uint8 i=0;
+				
 				for(i=0;i<WORD_SIZE/2;i++){
-					uint8 tmp = *nm;
-					if((tmp>'a' && tmp <'z' )|| (tmp>'A' && tmp<'Z')){
+					char tmp = *nm;
+					if((tmp>='a' && tmp <='z' )|| (tmp>='A' && tmp<='Z')){
 						Disp_GLCDWrite(i,2,*nm);
 						nm++;
 					}
 					tmp = *nm;	
-					if((tmp>'a' && tmp <'z' )|| (tmp>'A' && tmp<'Z')){	
-						Disp_GLCDData(tmp);
+					if((tmp>='a' && tmp <='z' )|| (tmp>='A' && tmp<='Z')){	
+						Disp_GLCDData(*nm);
 						nm++;
 					}
 				}
+				
 				uint32 valD=tbl[product_no].valDec;
 				uint32 valC=tbl[product_no].valCent;
 	 			Disp_GLCDWriteText(0,3,"Price:");
@@ -549,55 +550,41 @@ void stateMachine(uint8 eventId){
     	}
     	else if(eventId == (uint8)GSM_UNIT_SMS_RECVD){
 
-	    	char smsState=gsmPaymentInfo[0][0];
-	    	Disp_GLCDClearDisp();
-	    	Disp_GLCDWriteText(0, 1,"Initials: ");
-	    	Disp_GLCDWriteText(5, 1, gsmPaymentInfo[1]);
-	    	Disp_GLCDWriteText(0, 2,"Payment: ");				//fill blah with suitable words
-	    	Disp_GLCDWriteText(5, 2, gsmPaymentInfo[2]);		//then change 3 to ceil(no of chars above/2)
-	    	Disp_GLCDWriteText(0, 3,"PIN: ");
-	    	Disp_GLCDWriteText(3, 3, gsmPaymentInfo[3]);
-	    	
-	    	uint8 i=0;
+			Disp_GLCDClearDisp();
+			char smsState=gsmPaymentInfo[0][0];
+			
+			uint8 i=0;
 	    	uint8 pinMatch=1;
 	    	for(i=0;i<PIN_LENGTH;i++){
 		    	if(vendingMachineSerial[i] != gsmPaymentInfo[3][i]){
 		    		pinMatch=0;
 		    	}
-	    	}
-	    	
-	    	uint8 smsPayment=0;
-	    	
-	    	for(i=5;i>=0;i--){
-		    	if(gsmPaymentInfo[2][i]>='0' && gsmPaymentInfo[2][i]<='9')
-		    		smsPayment += smsPayment*10+(gsmPaymentInfo[2][i]-'0');
-	    	}
-	    	
+	    	}   	
 	    	
 	    	if(smsState =='1' && pinMatch ==1){
-		    	if(total<=smsPayment){
-		    		Disp_GLCDWriteText(0, 0,"SUCCESS");
-		    		DelayMs(100);
+			    	Disp_GLCDWriteText(0, 0,"SUCCESS");
+			    	Disp_GLCDWriteText(0, 1,"Initials: ");
+			    	Disp_GLCDWriteText(5, 1, gsmPaymentInfo[1]);
+			    	Disp_GLCDWriteText(0, 2,"Payment: ");				//fill blah with suitable words
+			    	Disp_GLCDWriteText(5, 2, gsmPaymentInfo[2]);		//then change 3 to ceil(no of chars above/2)
+			    	Disp_GLCDWriteText(0, 3,"PIN: ");
+			    	Disp_GLCDWriteText(3, 3, gsmPaymentInfo[3]);
+		    		DelayMs(500);
 		    		enque(OK);
-	    		}
-	    		else{
-	    			Disp_GLCDWriteText(0, 0,"LOW BALANCE");
-	    			DelayMs(500);
-	    			enque(CANCEL);
-	    		}
-	    		
 	    	}
 	    	else if(smsState == '1' && pinMatch ==0){
 	    		Disp_GLCDWriteText(0, 0,"PIN MISMATCH");
 	    		DelayMs(500);
 	    		enque(CANCEL);
-	    		
 	    	}
 	    	else if(smsState == '0'){
 	    		Disp_GLCDWriteText(0, 0,"FAILURE");
 	    		DelayMs(500);
 	    		enque(CANCEL);
 	    	}
+			
+	    	
+	    	
     	}
     	else if(eventId == (uint8)CANCEL){
 	    	amount=0;
@@ -985,13 +972,13 @@ char* genSMSPIN(){
 	VMSerial=getVMSerial();
 	uint8 i=0;
 	for(i=0;i<4;i++){
-		vendingMachineSerial[i]=VMSerial%10+'0';
+		vendingMachineSerial[i]=VMSerial%26+'A';
 		VMSerial = VMSerial/10;
 	}
 	uint32 tot=total;
-	for(i=PIN_LENGTH-2;i>=4;i--){
-		vendingMachineSerial[i]=tot%10+'0';
-		tot = tot/10;
+	for(i=0;i<3;i++){
+		vendingMachineSerial[i+4]=tot%26+'A';
+		tot = tot/26;
 	}
 	vendingMachineSerial[7]='\0';
 	return vendingMachineSerial;
