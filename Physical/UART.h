@@ -1,6 +1,8 @@
 #ifndef MDBUART
 #define MDBUART
 
+#define CONSOLE_PORT 	UART1
+#define CONSOLE_VECTOR	_UART_1_VECTOR
 
 #define UART_INIT(PORT,BAUD,NO_BITS)  													     	 \
 		UARTConfigure(PORT, UART_ENABLE_PINS_TX_RX_ONLY); 									     \
@@ -13,7 +15,7 @@
 		INTSetVectorSubPriority(INT_VECTOR_UART(PORT), INT_SUB_PRIORITY_LEVEL_0);                \
 
 
-#define UART_INT(PORT,PRIORITY)  void __ISR( PORT##_VECTOR , PRIORITY) PORT##IntHandler(void)
+#define UART_INT(PORT,PRIORITY)  void __ISR( PORT , PRIORITY) PORT##IntHandler(void)
 
 #define UART_SEND_CHAR_PROTO(PORT) void hal_sendChar_##PORT (const char character)
 

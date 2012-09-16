@@ -78,8 +78,8 @@ void InitDB()
 	uint16 count=WORD_SIZE+4;
 	
 	#ifdef DEBUG
-		hal_sendString_UART1("Database downloading");
-		hal_sendChar_UART1('\n');
+		hal_sendString_CONSOLE_PORT("Database downloading");
+		hal_sendChar_CONSOLE_PORT('\n');
 	#endif
 
 	traySize=read_flash_word(NVM_PROGRAM_PAGE+NVM_PAGE_SIZE);
@@ -193,15 +193,15 @@ void fsm_update()
 			}	
 		}
 				
-		hal_sendChar_UART1('s');
-		hal_sendChar_UART1('\n');
+		hal_sendChar_CONSOLE_PORT('s');
+		hal_sendChar_CONSOLE_PORT('\n');
 		uint16 num=traySize*noOftrays+1;
-		hal_sendChar_UART1((unsigned char)num);
-		hal_sendChar_UART1('\n');
-		hal_sendChar_UART1((unsigned char)traySize);
-		hal_sendChar_UART1('\n');
-		hal_sendChar_UART1((unsigned char)noOftrays);
-		hal_sendChar_UART1('\n');
+		hal_sendChar_CONSOLE_PORT((unsigned char)num);
+		hal_sendChar_CONSOLE_PORT('\n');
+		hal_sendChar_CONSOLE_PORT((unsigned char)traySize);
+		hal_sendChar_CONSOLE_PORT('\n');
+		hal_sendChar_CONSOLE_PORT((unsigned char)noOftrays);
+		hal_sendChar_CONSOLE_PORT('\n');
 		
 			for(i=1;i<num;i++){
 				char tmp[WORD_SIZE+2];
@@ -213,19 +213,19 @@ void fsm_update()
 				}
 				tmp[j]='\n';
 				tmp[j+1]='\0';
-				hal_sendString_UART1(tmp);
+				hal_sendString_CONSOLE_PORT(tmp);
 				
 				hal_uartWriteNumber(tbl[i].number);
-				hal_sendChar_UART1('\n');
+				hal_sendChar_CONSOLE_PORT('\n');
 				hal_uartWriteNumber(tbl[i].amount);
-				hal_sendChar_UART1('\n');
+				hal_sendChar_CONSOLE_PORT('\n');
 				hal_uartWriteNumber(tbl[i].valDec);
-				hal_sendChar_UART1('\n');
+				hal_sendChar_CONSOLE_PORT('\n');
 				//hal_uartWriteNumber(i);
-				//hal_sendChar_UART1('\n');
+				//hal_sendChar_CONSOLE_PORT('\n');
 			}
-			hal_sendChar_UART1('#');
-			hal_sendChar_UART1('\n');
+			hal_sendChar_CONSOLE_PORT('#');
+			hal_sendChar_CONSOLE_PORT('\n');
 			enque(FIN);	
 			update=5;
 			i=1;

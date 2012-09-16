@@ -60,7 +60,7 @@
 
 #define DESIRED_BAUDRATE    		(9600) 
 #define MDB_PORT 					UART2
-#define MDB_VECTOR 					_UART_2
+#define MDB_VECTOR 					_UART_2_VECTOR
 	
 #define NO_OF_MDB_EVENTS 			3
 #define POLL_TIME					(SECOND)
@@ -669,7 +669,7 @@ MDB_SEND_9_DATA(MDB_PORT)
 //////////////////////MDB ISRs///////////////////////////////////////////////////
 
 //uart isr
-UART_INT(_UART_2, ipl2){
+UART_INT(MDB_VECTOR, ipl2){
 	if(INTGetFlag(INT_SOURCE_UART_RX(MDB_PORT))){
 	    INTClearFlag(INT_SOURCE_UART_RX(MDB_PORT));	    
 	    if (UARTReceivedDataIsAvailable(MDB_PORT))      
@@ -766,6 +766,7 @@ uint8 mdbGetNext(uint8 index){
       return ++index;
     }
 }
+
 
 
 

@@ -40,7 +40,7 @@
 #include "MDB.h"
 #include "TrayMotorControl.h"
 #include "GSM.h"
-//#include "NFC.h"
+#include "NFC.h"
 
 /* 
 ********************************************************************************************************* 
@@ -48,12 +48,15 @@
 ********************************************************************************************************* 
 */ 
 
+//using keys
 #define PRODUCT_SELECT 1	//use keys for product select
 #define AMOUNT_SELECT 2	//use keys to select number of products
 #define CHECK_METHOD 3  //use keys to select payment method
 
 
+//sms/nfc pay
 #define PIN_LENGTH 8
+#define NFC_MSG_LENGTH 20
 
 /* 
 ********************************************************************************************************* 
@@ -99,13 +102,18 @@ char vendingMachineSerial[PIN_LENGTH];
 ********************************************************************************************************* 
 */ 
 
+//init
 void board_init();
+
+//FSM
 void stateMachine(uint8 eventId);
 void changeState(uint8 nextStateId);
 void onStateExit(uint8 stateId);
 uint8 deque();
 void onStateEntry(uint8 stateId);
 uint8 getNext(uint8 index);
+
+//GSM
 char* genSMSPIN();
 
 /* 
@@ -152,7 +160,7 @@ int main(void)
 {
 	board_init();												//Initialize the circuit board configurations
   	changeState(START);											//Initialize the state
-  	enque(DIAGNOSTIC);											//first do diagnostic
+  	enque(DIAGNOSE);											//first do diagnostic
 
   	/*#ifdef SHOW_MESSAGES
 	    hal_sendString_UART1("Machine started");
@@ -163,14 +171,15 @@ int main(void)
   	INTEnableInterrupts();
   	INTEnableSystemMultiVectoredInt();
 	
-	setTraySize(3);
-    setNoOfTrays(2);
-	
-	char name[]="Soda";
-	addData(1,1,name,5,50,0);
-	
-	flashDB();
-	InitDB();
+	#ifdef DUMMY_DB_FLASH
+		setTraySize(3);
+	    setNoOfTrays(2);
+		
+		char name[]="Dilshan";
+		addData(1,1,name,5,500,0);
+		
+		flashDB();
+	#endif
 	
   	while(1){
 	  	
@@ -200,8 +209,7 @@ int main(void)
      	
      	//mdbStateMachine();
      	//gsmStateMachine();
-     	
-     	//hal_sendChar_UART3(0xAA);
+
      	gsmStateMachine();
      	
   	}	
@@ -211,16 +219,16 @@ int main(void)
 
 void board_init(){
 	
-	DDPCONbits.JTAGEN = 0;										//disable JTAG
-	DBINIT();     												// Initialize the IO channel
-  	hal_allUARTInit();											//Initialize all UARTs
-  	keypad_init();												//Initialize keypad
+	DDPCONbits.JTAGEN = 0;				//disable JTAG
+	DBINIT();     						// Initialize the IO channel
+	hal_allUARTInit();					//Initialize all UARTs
+	keypad_init();						//Initialize keypad
 	Disp_Init();
 	Disp_GLCDInit();
-	gsmInit();
-	//hal_mdbInit();
-	//hal_sendChar_UART1('a');
-	//NFC_Init();
+	gsmInit();							//GSM init
+	//hal_mdbInit();					//MDB Init
+	//NFC_Init();						//NFC Init
+	InitDB();							//product database init
 }
 
 
@@ -296,9 +304,6 @@ void stateMachine(uint8 eventId){
 		 		Disp_GLCDWriteText(0,0,"Entered Value");
 				
 				Disp_GLCDNumber(product_no,1,3,1);
-				
-		 		/*Disp_GLCDWrite(3,1,(product_no/10)+0x30);
-		 		Disp_GLCDWrite(4,1,(product_no-(product_no/10)*10)+0x30);*/
 
 		 		#ifdef DEBUG
 					hal_sendString_UART1("product no = ");
@@ -339,16 +344,7 @@ void stateMachine(uint8 eventId){
 		 		Disp_GLCDWriteText(0,3,"Total = ");
 		 		
 		 		Disp_GLCDNumber(total,1,3,1);
-		 		
-		 		/*uint8 thou=total/1000;
-	 			Disp_GLCDWrite(3,1,(thou)+'0');
-	 			Disp_GLCDData(((total/100)-thou*10)+'0');
-	 			Disp_GLCDWrite(4,1,((total%100)-total%10)/10+'0');
-	 			Disp_GLCDData(total%10+'0');
-	 			Disp_GLCDWrite(5,1,'.');
-	 			Disp_GLCDData('0');
-	 			Disp_GLCDWrite(6,1,'0');*/
-	 			
+		 			 			
     	    	changeState(PAYMENT_METHOD); 
 			}
 			else 
@@ -359,14 +355,6 @@ void stateMachine(uint8 eventId){
 		 		
 		 		Disp_GLCDNumber(total,1,3,1);
 		 		
-		 		/*uint8 thou=total/1000;
-	 			Disp_GLCDWrite(3,1,(thou)+'0');
-	 			Disp_GLCDData(((total/100)-thou*10)+'0');
-	 			Disp_GLCDWrite(4,1,((total%100)-total%10)/10+'0');
-	 			Disp_GLCDData(total%10+'0');
-	 			Disp_GLCDWrite(5,1,'.');
-	 			Disp_GLCDData('0');
-	 			Disp_GLCDWrite(6,1,'0');*/
     	    	changeState(PAYMENT_METHOD);  
    			} 	    
     	}    
@@ -380,9 +368,6 @@ void stateMachine(uint8 eventId){
 		 		
 		 		Disp_GLCDNumber(amount,1,3,1);
 		 		
-		 		/*Disp_GLCDWrite(3,1,(amount/10)+0x30);
-		 		Disp_GLCDWrite(4,1,(amount-(amount/10)*10)+0x30);
-		 		*/
 				uint32 *nm=tbl[product_no].name;
 				uint8 i=0;
 				
@@ -403,17 +388,7 @@ void stateMachine(uint8 eventId){
 				uint32 valC=tbl[product_no].valCent;
 	 			Disp_GLCDWriteText(0,3,"Price:");
 	 			
-	 			Disp_GLCDNumber(valD,3,4,1);
-	 			
-	 			/*uint8 thou=valD/1000;
-	 			Disp_GLCDWrite(4,3,(thou)+'0');
-	 			Disp_GLCDData(((valD/100)-thou*10)+'0');
-	 			Disp_GLCDWrite(5,3,((valD%100)-valD%10)/10+'0');
-	 			Disp_GLCDData(valD%10+'0');
-	 			Disp_GLCDWrite(6,3,'.');
-	 			Disp_GLCDData((valC/10)+'0');
-	 			Disp_GLCDWrite(7,3,(valC-(valC/10)*10)+'0');*/
-	 			
+	 			Disp_GLCDNumber(valD,3,4,1); 			
 	 			
 		 		#ifdef DEBUG
 					hal_sendString_UART1("amount = ");
@@ -459,8 +434,13 @@ void stateMachine(uint8 eventId){
      		}	
      		else if(key==3)
      		{
-	     		enque(NFC_INFO);
-     			changeState(NFC_PAY);
+	     		if(isGsmInitialized == 0){
+    				enque(ENTER_NO);
+   				}
+	     		else{
+	     			enque(NFC_INFO);
+     				changeState(NFC_PAY);
+     			}
      		}	
 	    	
 	    }	
@@ -479,23 +459,10 @@ void stateMachine(uint8 eventId){
 	    	balance=enteredValue-total;
 	    	if(balance<0){
 	    		Disp_GLCDWriteText(0,2,"Entered = ");			
-	 			Disp_GLCDNumber(enteredValue,2,5,1);
-	 			/*uint8 thou=enteredValue/1000;
-	 			Disp_GLCDWrite(5,2,(thou)+'0');
-	 			Disp_GLCDData(((enteredValue/100)-thou*10)+'0');
-	 			Disp_GLCDWrite(6,2,((enteredValue%100)-enteredValue%10)/10+'0');
-	 			Disp_GLCDData(enteredValue%10+'0');
-				*/
-				
+	 			Disp_GLCDNumber(enteredValue,2,5,1);				
 	    	}else{
 	    		Disp_GLCDWriteText(0,2,"Entered = ");			
 	    		Disp_GLCDNumber(enteredValue,2,5,1);
-	    		/*uint8 thou=enteredValue/1000;
-	 			Disp_GLCDWrite(5,2,(thou)+'0');
-	 			Disp_GLCDData(((enteredValue/100)-thou*10)+'0');
-	 			Disp_GLCDWrite(6,2,((enteredValue%100)-enteredValue%10)/10+'0');
-	 			Disp_GLCDData(enteredValue%10+'0');
-				*/
 	 			Disp_GLCDWriteText(0,3,"Press Enter");
 	 			canAcceptBills=0;							//stop bill accepting
 	 			
@@ -581,10 +548,7 @@ void stateMachine(uint8 eventId){
 	    		Disp_GLCDWriteText(0, 0,"FAILURE");
 	    		DelayMs(500);
 	    		enque(CANCEL);
-	    	}
-			
-	    	
-	    	
+	    	}	    	
     	}
     	else if(eventId == (uint8)CANCEL){
 	    	amount=0;
@@ -597,31 +561,31 @@ void stateMachine(uint8 eventId){
      break;
   
     case NFC_PAY:
-    	/*
-	    if(isGsmInitialized == 0){
-    			enque(OK);
-   		}
-   		else{
-    		globalMsg[0]='m';
-    		globalMsg[1]='s';
-    		globalMsg[2]='g';
-    		globalMsg[3]=0x1A;
-    		globalMsg[4]='\0';
-	      	gsmSetSmsParameters(globalMsg,5);
-	      	gsmEnque(SEND_SMS);
-	    } 
-		 	
-		if(eventId == (uint8)NFC_INFO){
-			//NFCStart();
+    	if(eventId == (uint8)NFC_INFO){
+			NFCStart();
      	}
      	else if(eventId == (uint8)NFC_GET_CONFIRM) {
      		char* NFCmsg=genNFCmsg();    	
-	      	//gsmSetSmsParameters(NFCmsg,??);
-	      	//gsmEnque(SEND_SMS);
+	      	gsmSetSmsParameters(NFCmsg,18);
+	      	gsmEnque(SEND_SMS);
      	}
      	else if(eventId == (uint8)NFC_CONFIRM) {
      		changeState(DISPENSE);
-     	}	*/
+     	}
+     	else if(NFC_ERROR){
+     		amount=0;
+	    	product_no=0;
+	    	enteredValue =0;
+	    	enque(GSM_ERROR);
+	    	changeState(SYSTEM_LOCK);
+     	}
+     	else if(CANCEL){
+     		amount=0;
+	    	product_no=0;
+	    	enteredValue =0;
+	    	enque(PRODUCT_NO);
+    	    changeState(INIT);
+     	}		
      break;
     
     case DISPENSE:
@@ -764,14 +728,6 @@ void onStateEntry(uint8 stateId){
 	    Disp_GLCDWriteText(0,1,"Total = ");
 		
 		Disp_GLCDNumber(enteredValue,1,3,1);
-		/*uint8 thou=total/1000;
-		Disp_GLCDWrite(3,1,(thou)+'0');
-		Disp_GLCDData(((total/100)-thou*10)+'0');
-		Disp_GLCDWrite(4,1,((total%100)-total%10)/10+'0');
-		Disp_GLCDData(total%10+'0');
-		Disp_GLCDWrite(5,1,'.');
-		Disp_GLCDData('0');
-		Disp_GLCDWrite(6,1,'0');*/
 		keyuse=PRODUCT_SELECT;
 		
 		canAcceptBills=1;

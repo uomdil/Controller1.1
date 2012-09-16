@@ -74,13 +74,13 @@
 #define INIT_COMMANDS			3
 
 //other definitions
-#define RETRY_LIMIT				3
+#define GSM_RETRY_LIMIT			3
 
 
 //errors
 #define GSM_UNIT_ERROR			0
 #define GSM_UNIT_NOT_RESPONDING	1
-#define GSM_UNIT_SMS_RECVD		2
+
 
 /* 
 ********************************************************************************************************* 

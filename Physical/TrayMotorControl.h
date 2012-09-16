@@ -41,7 +41,7 @@
 #include <p32xxxx.h> 
 #include <plib.h>                   // include peripheral library functions
 #include "global.h"
-
+#include "UART.h"
 
 /* 
 ********************************************************************************************************* 
@@ -69,7 +69,7 @@
 void VendMotor1(uint8 trayNo);
 void VendMotor2();
 void VendMotor3();
-
+void Tray_init();
 
 /* 
 ********************************************************************************************************* 

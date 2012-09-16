@@ -125,7 +125,7 @@ void keypad_init(){
 	INTDisableInterrupts();
 	if(!INTGetEnable(INT_CN))
 	{
-  		hal_sendString_UART1("INT_DIS");	
+  		hal_sendString_CONSOLE_PORT("INT_DIS");	
    	}
    	
    	
@@ -135,7 +135,7 @@ void keypad_init(){
     // Step #2 - then clear the interrupt flag
     INTClearFlag(INT_CN);
     
-    hal_sendString_UART1("interrupt");
+    hal_sendString_CONSOLE_PORT("interrupt");
    
      // Step #3 - process the switches
      
@@ -170,13 +170,13 @@ void keypad_init(){
 	    
     }
         
-    hal_sendChar_UART1('\n');
+    hal_sendChar_CONSOLE_PORT('\n');
     hal_uartWriteNumber(but1);
-    hal_sendChar_UART1('\n');
+    hal_sendChar_CONSOLE_PORT('\n');
     hal_uartWriteNumber(but2);
-    hal_sendChar_UART1('\n');
+    hal_sendChar_CONSOLE_PORT('\n');
     hal_uartWriteNumber(but3);
-    hal_sendChar_UART1('\n');
+    hal_sendChar_CONSOLE_PORT('\n');
     
    type = 0;
    unsigned int max = 70000;
@@ -196,7 +196,7 @@ void keypad_init(){
    	if(type==1)
    	{
 	    	#ifdef TEST
-				hal_sendString_UART1("row1");
+				hal_sendString_CONSOLE_PORT("row1");
 			#endif	
 			
 			
@@ -204,7 +204,7 @@ void keypad_init(){
 	 }
 	 else if(type==2){
 		    #ifdef TEST
-				hal_sendString_UART1("row2");
+				hal_sendString_CONSOLE_PORT("row2");
 	    	#endif
 			
 			
@@ -213,12 +213,12 @@ void keypad_init(){
 	 }
 	 else if(type==3){
 		    #ifdef TEST
-				hal_sendString_UART1("row3");
+				hal_sendString_CONSOLE_PORT("row3");
 	    	#endif
 			
 	}
 	else{
-		hal_sendString_UART1("error\n");
+		hal_sendString_CONSOLE_PORT("error\n");
 	}
 	
 	
@@ -241,7 +241,7 @@ void keypad_init(){
 			unsigned int chk = dummy&ROW1;
 			
 			if(chk==0){
-				hal_sendString_UART1("but1");
+				hal_sendString_CONSOLE_PORT("but1");
 			}		
 			
 			ALL_SET
@@ -250,7 +250,7 @@ void keypad_init(){
 			chk = dummy&ROW1;
 			
 			if(chk==0){
-				hal_sendString_UART1("but2");
+				hal_sendString_CONSOLE_PORT("but2");
 			}	
 			
 			ALL_SET
@@ -259,7 +259,7 @@ void keypad_init(){
 			chk = dummy&ROW1;
 			
 			if(chk==0){
-				hal_sendString_UART1("but3");
+				hal_sendString_CONSOLE_PORT("but3");
 			}	
 			
 			ALL_SET
@@ -268,7 +268,7 @@ void keypad_init(){
 			chk = dummy&ROW1;
 			
 			if(chk==0){
-				hal_sendString_UART1("but4");
+				hal_sendString_CONSOLE_PORT("but4");
 			}
 		}	
 	}
@@ -343,9 +343,9 @@ void keypad_pole()
 		select_key(ROW1);	
 		
 		#ifdef DEBUG
-			hal_sendString_UART1("Key = ");
+			hal_sendString_CONSOLE_PORT("Key = ");
 			hal_uartWriteNumber(key);
-			hal_sendChar_UART1('\n');
+			hal_sendChar_CONSOLE_PORT('\n');
 		#endif
 		
 	 }
@@ -354,9 +354,9 @@ void keypad_pole()
     		
 		select_key(ROW2);
 		#ifdef DEBUG
-			hal_sendString_UART1("Key = ");
+			hal_sendString_CONSOLE_PORT("Key = ");
 			hal_uartWriteNumber(key);
-			hal_sendChar_UART1('\n');
+			hal_sendChar_CONSOLE_PORT('\n');
 		#endif
 		
 	}
@@ -366,9 +366,9 @@ void keypad_pole()
 		select_key(ROW3);
 		
 		#ifdef DEBUG
-			hal_sendString_UART1("Key = ");
+			hal_sendString_CONSOLE_PORT("Key = ");
 			hal_uartWriteNumber(key);
-			hal_sendChar_UART1('\n');
+			hal_sendChar_CONSOLE_PORT('\n');
 		#endif
 		
 	}

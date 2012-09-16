@@ -62,7 +62,7 @@ All rights reserved
 #define GSM_BIT			BIT_15
 #define GSM_BAUDRATE	9600
 #define GSM_PORT		UART4
-#define GSM_VECTOR		_UART_4
+#define GSM_VECTOR		_UART_4_VECTOR
 
 
 
@@ -178,7 +178,7 @@ UART_SEND_STRING(GSM_PORT)	//gsm - for sending strings
 
 UART_SEND_CHAR(GSM_PORT)	//gsm - for sending unsigned chars
 
-UART_INT(_UART_4, ipl2){  //gsm - UART interrupt
+UART_INT(GSM_VECTOR, ipl2){  //gsm - UART interrupt
 
 	if(INTGetFlag(INT_SOURCE_UART_RX(GSM_PORT)))		
 	{												
@@ -187,7 +187,7 @@ UART_INT(_UART_4, ipl2){  //gsm - UART interrupt
 		{                     
 			closeGSMTimer();
 			char tmpChar=UARTGetDataByte(GSM_PORT);
-			//hal_sendChar_UART1(tmpChar);
+			//hal_sendChar_CONSOLE_PORT(tmpChar);
 			//processing event - call gsm process packet 
 			//<CR><LF> COMMAND <CR><LF>
 			if(gsmReadSMS){
@@ -266,7 +266,7 @@ void closeGSMTimer(){
 
 void __ISR(_TIMER_2_VECTOR, ipl5) gsmIntHandler(void){
 	mT2ClearIntFlag();
-	if(gsmRetrys >= RETRY_LIMIT){
+	if(gsmRetrys >= GSM_RETRY_LIMIT){
 		//enque(GSM_UNIT_NOT_RESPONDING); //for the main state machine
 	}
 	else{
@@ -351,13 +351,13 @@ void gsmProcessPacket(){
 	if(compareString("OK")){
 		gsmEnque(OK_RECEIVED);
 		#ifdef GSM_DEBUG
-			hal_sendString_UART1("OK");
+			hal_sendString_CONSOLE_PORT("OK");
 		#endif
 		gsmReadSMS = 0;
 	}
 	else if(compareString("ERROR")){
 		#ifdef GSM_DEBUG
-			hal_sendString_UART1("ERROR");
+			hal_sendString_CONSOLE_PORT("ERROR");
 		#endif
 		gsmEnque(ERROR_RECEIVED);
 	}
@@ -410,21 +410,21 @@ void gsmSendInitCommands(){
 
 	if(gsmCommandIndex == 0){
 		#ifdef GSM_DEBUG
-			hal_sendString_UART1("AT\r");
+			hal_sendString_CONSOLE_PORT("AT\r");
 		#endif
 		gsmSendPacket("AT\r");
 		gsmLastCommand = "AT\r";
 	}
 	else if(gsmCommandIndex == 1){
 		#ifdef GSM_DEBUG
-			hal_sendString_UART1("AT+CSQ\r");
+			hal_sendString_CONSOLE_PORT("AT+CSQ\r");
 		#endif
 		gsmSendPacket("AT+CSQ\r");
 		gsmLastCommand = "AT+CSQ\r";
 	}
 	else if(gsmCommandIndex == 2){
 		#ifdef GSM_DEBUG
-			hal_sendString_UART1("AT+CREG?\r");
+			hal_sendString_CONSOLE_PORT("AT+CREG?\r");
 		#endif
 		gsmSendPacket("AT+CREG?\r");
 		gsmLastCommand = "AT+CREG?\r";
@@ -451,21 +451,21 @@ void gsmSendSMS(){
 	
 	if(gsmCommandIndex == 0){
 		#ifdef GSM_DEBUG
-			hal_sendString_UART1("AT\r");
+			hal_sendString_CONSOLE_PORT("AT\r");
 		#endif
 		gsmSendPacket("AT\r");
 		gsmLastCommand = "AT\r";
 	}
 	else if(gsmCommandIndex == 1){
 		#ifdef GSM_DEBUG
-			hal_sendString_UART1("AT+CMGF=1\r");
+			hal_sendString_CONSOLE_PORT("AT+CMGF=1\r");
 		#endif
 		gsmSendPacket("AT+CMGF=1\r");
 		gsmLastCommand = "AT+CMGF=1\r";
 	}
 	else if(gsmCommandIndex == 2){
 		#ifdef GSM_DEBUG
-			hal_sendString_UART1("AT+CMGS=\"+94718196279\"\r");
+			hal_sendString_CONSOLE_PORT("AT+CMGS=\"+94718196279\"\r");
 		#endif
 		gsmSendPacket("AT+CMGS=\"+94718196279\"\r");
 		gsmLastCommand = "AT+CMGS=\"+94718196279\"\r";
@@ -480,7 +480,7 @@ void gsmSendSMS(){
 		tmpCharPtr++;
 		*tmpCharPtr = '\0';*/
 		#ifdef GSM_DEBUG
-			hal_sendString_UART1(gsmSmsMsg);
+			hal_sendString_CONSOLE_PORT(gsmSmsMsg);
 		#endif
 		char tmpCharArray[26];
 		unsigned int i=0;

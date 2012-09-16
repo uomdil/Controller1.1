@@ -31,7 +31,6 @@ All rights reserved
 ********************************************************************************************************* 
 */ 
 
-#include "global.h"
 #include "NFC.h"
 
 /* 
@@ -40,10 +39,14 @@ All rights reserved
 ********************************************************************************************************* 
 */ 
 
-		
+//port		
 #define NFC_BAUDRATE	9600
 #define NFC_PORT		UART5
-#define NFC_VECTOR		_UART_5
+#define NFC_VECTOR		_UART_5_VECTOR
+
+//msg length
+#define NFC_MSG_LENGTH		18
+#define NFC_SERIAL_LENGTH	20
 
 /* 
 ********************************************************************************************************* 
@@ -59,11 +62,12 @@ char NFCRxBuffer[100];
 unsigned int NFCRxBufferFilled = 0;
 
 //NFC data
-char NFCDetailBuffer[100];
-unsigned int NFCDetailBufferFilled = 0;
+char NFCSerialBuffer[NFC_SERIAL_LENGTH];
+unsigned int NFCSerialBufferFilled = 0;
 char NFCType;
 char NFCUIDBuffer[4];
 
+char NFCmsg[NFC_MSG_LENGTH];
 
 /* 
 ********************************************************************************************************* 
@@ -72,16 +76,17 @@ char NFCUIDBuffer[4];
 */ 
 //NFC timer functions
 void startNFCTimer();
-void stopNFCTimer();
 void closeNFCTimer();
-void getNFCDetails();
-
+void getNFCSerial();
+void NFCStart();
+void NFCStop();
 /* 
 ********************************************************************************************************* 
 *                                        CONFIGURATION BITS 
 ********************************************************************************************************* 
 */ 
 
+UART_SEND_CHAR(NFC_PORT)
 
 
 void NFC_Init()
@@ -100,7 +105,7 @@ void pollNFC()
 	if(NFCRxBufferFilled >= 1){
 		if(NFCRxBuffer[0]== 0x00){	
 			closeNFCTimer();
-			getNFCDetails();
+			getNFCSerial();
 		}else{
 			NFCRxBufferFilled=0;
 			enque(NFC_ERROR);
@@ -109,14 +114,14 @@ void pollNFC()
 }
 
 
-void getNFCDetails()
+void getNFCSerial()
 {
 	NFCType =NFCRxBuffer[1];
 	uint8 i=0;
 	for(i=3;i<NFCRxBufferFilled-4;i++)
 	{
-		NFCDetailBuffer[NFCDetailBufferFilled] = NFCRxBuffer[i];
-		NFCDetailBufferFilled++;
+		NFCSerialBuffer[NFCSerialBufferFilled] = NFCRxBuffer[i];
+		NFCSerialBufferFilled++;
 	}
 	for(i=0;i<4;i++)
 	{
@@ -124,7 +129,7 @@ void getNFCDetails()
 	}
 	enque(NFC_GET_CONFIRM);
 	//if needed
-	switch(NFCType){
+	/*	switch(NFCType){
 	case 'M':
 		
 	break;
@@ -135,23 +140,23 @@ void getNFCDetails()
 	
 	break;
 	
-	}
+	}*/
 }
 
 
 
 char* genNFCmsg()  
 {
-	char NFCmsg[NFCDetailBufferFilled+6];
+	
 	uint8 i=0;
-	for(i=0;i<NFCDetailBufferFilled;i++)
+	for(i=0;i<NFCSerialBufferFilled;i++)
 	{
 		NFCmsg[i] = NFCRxBuffer[i];
 		//blah blah
 	}
 	
-	NFCmsg[NFCDetailBufferFilled]='\r';
-	NFCmsg[NFCDetailBufferFilled]='\0';
+	NFCmsg[NFCSerialBufferFilled]='\r';
+	NFCmsg[NFCSerialBufferFilled]='\0';
 
 	return NFCmsg;
 }
@@ -184,7 +189,7 @@ void closeNFCTimer(){
 
 void __ISR(_TIMER_3_VECTOR, ipl5) NFCIntHandler(void){
 	mT3ClearIntFlag();
-	if(NFCRetrys >= RETRY_LIMIT){
+	if(NFCRetrys >= NFC_RETRY_LIMIT){
 		NFCStop();
 		enque(NFC_UNIT_NOT_RESPONDING); //for the main state machine
 	}
@@ -195,6 +200,8 @@ void __ISR(_TIMER_3_VECTOR, ipl5) NFCIntHandler(void){
 	
 }
 
+
+
 UART_INT(NFC_VECTOR, ipl2){  //nfc - UART interrupt
 
 	if(INTGetFlag(INT_SOURCE_UART_RX(NFC_PORT)))		
@@ -202,7 +209,7 @@ UART_INT(NFC_VECTOR, ipl2){  //nfc - UART interrupt
 	    INTClearFlag(INT_SOURCE_UART_RX(NFC_PORT));	    
 	    if (UARTReceivedDataIsAvailable(NFC_PORT))      
 		{                     
-			stopNFCTimer();
+			closeNFCTimer();
 			char tmpChar=UARTGetDataByte(NFC_PORT);
 			 
 			NFCRxBuffer[NFCRxBufferFilled] = tmpChar;

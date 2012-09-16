@@ -67,6 +67,11 @@
 #define	GetPeripheralClock()		(GetSystemClock()/(1 << OSCCONbits.PBDIV))
 #define	GetInstructionClock()		(GetSystemClock())
 
+#define PB_DIV                 	8
+#define PRESCALE               	256
+#define MILLISECOND				SYS_FREQ/PB_DIV/PRESCALE/1000
+#define SECOND					SYS_FREQ/PB_DIV/PRESCALE
+
 
 //define state IDs of the controller
 
@@ -112,12 +117,13 @@
 #define MOTOR_OK			21
 #define NFC_INFO			22
 #define NFC_CONFIRM			23
-
+#define GSM_UNIT_SMS_RECVD	24
 
 //special error events
-#define GSM_ERROR			24
-#define GSM_NOT_RESPONDING  25
-
+#define GSM_ERROR				25
+#define GSM_NOT_RESPONDING  	26
+#define NFC_ERROR				27
+#define NFC_UNIT_NOT_RESPONDING	28
 
 
 

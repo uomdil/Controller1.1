@@ -6,47 +6,35 @@
 #define DESIRED_BAUDRATE_1A   		(9600)      //The desired BaudRate 1A
 
 
-uint8 gsm_status =0;
-uint8 gsm_count =0;
-
-uint8 motor_response=0;
-uint8 motor=0;
-
-uint8 resposnse[3][5];
-uint8 first_idx=0;
-uint8 second_idx=0;
-
-
 void hal_allUARTInit(void){
 
 	mPORTGOpenDrainOpen(BIT_8);			//Tray
 	//mPORTDOpenDrainOpen(BIT_15);		//GSM
 	
-	UART_INIT(UART1,DESIRED_BAUDRATE_1A,8_BITS)
+	UART_INIT(CONSOLE_PORT,DESIRED_BAUDRATE_1A,8_BITS)
 	UART_INIT(UART3,DESIRED_BAUDRATE_1A,8_BITS)	//tray
 
 	
 }
 
 //function prototype - void hal_sendString_##PORT (const char *string)
-UART_SEND_STRING(UART1)
+UART_SEND_STRING(CONSOLE_PORT)
 
 
 
 //function prototype - void hal_sendChar_##PORT (const char character)
-UART_SEND_CHAR(UART1)
-UART_SEND_CHAR(UART3)  //for tray
+UART_SEND_CHAR(CONSOLE_PORT)
 
 
 //interrupt service routines
-UART_INT(_UART_1, ipl2){
-	//UART_INT_TEST(UART1)
-	if(INTGetFlag(INT_SOURCE_UART_RX(UART1)))		
+UART_INT(CONSOLE_VECTOR, ipl2){
+	//UART_INT_TEST(CONSOLE_PORT)
+	if(INTGetFlag(INT_SOURCE_UART_RX(CONSOLE_PORT)))		
 	{												
-	    INTClearFlag(INT_SOURCE_UART_RX(UART1));	    
-	    if (UARTReceivedDataIsAvailable(UART1))      
+	    INTClearFlag(INT_SOURCE_UART_RX(CONSOLE_PORT));	    
+	    if (UARTReceivedDataIsAvailable(CONSOLE_PORT))      
 		{                                           
-			uint8 x=UARTGetDataByte(UART1);
+			uint8 x=UARTGetDataByte(CONSOLE_PORT);
 			
 			if(update !=UPDATE){
 				switch(x){
@@ -66,73 +54,13 @@ UART_INT(_UART_1, ipl2){
 			}
 		}											
 	}												
-	if ( INTGetFlag(INT_SOURCE_UART_TX(UART1)) )  	
+	if ( INTGetFlag(INT_SOURCE_UART_TX(CONSOLE_PORT)) )  	
 	{												
-		INTClearFlag(INT_SOURCE_UART_TX(UART1));	    
+		INTClearFlag(INT_SOURCE_UART_TX(CONSOLE_PORT));	    
 	}
 }	
-/*UART_INT(_UART_2, ipl2){
-	//UART_INT_TEST(UART2)
-	
-	if(INTGetFlag(INT_SOURCE_UART_RX(UART2)))		
-	{												
-	    INTClearFlag(INT_SOURCE_UART_RX(UART2));	    
-	    if (UARTReceivedDataIsAvailable(UART2))      
-		{                                           
-			uint8 x=UARTGetDataByte(UART2);
-			
-			switch(x){
 
-			}
-			
-		}											
-	}												
-	if ( INTGetFlag(INT_SOURCE_UART_TX(UART2)) )  	
-	{												
-		INTClearFlag(INT_SOURCE_UART_TX(UART2));	    
-	}
-	
-	
-}*/
 
-UART_INT(_UART_3, ipl2){
-	//UART_INT_TEST(UART3)
-	
-	if(INTGetFlag(INT_SOURCE_UART_RX(UART3)))		
-	{												
-	    INTClearFlag(INT_SOURCE_UART_RX(UART3));	    
-	    if (UARTReceivedDataIsAvailable(UART3))      
-		{                                           
-			uint8 x=UARTGetDataByte(UART3);
-			
-			resposnse[first_idx][second_idx]=x;
-			motor_response++;
-			second_idx++;
-			if(motor_response==5 && motor <2){
-				motor_response=0;
-				enque(MOTOR_OK);
-				motor++;
-				first_idx++;
-				second_idx=0;
-				//Disp_GLCDClearDisp();
-	    		//Disp_GLCDWriteText(0,1,"motor res");
-	    		//DelayMs(1000);
-			}else if(motor_response==5 && motor==2){   //response for the third motor
-				motor_response=0;
-				enque(MOTOR_OK);
-				motor=0;
-				first_idx=0;
-				second_idx=0;
-			}
-			
-		}											
-	}												
-	if ( INTGetFlag(INT_SOURCE_UART_TX(UART3)) )  	
-	{												
-		INTClearFlag(INT_SOURCE_UART_TX(UART3));	    
-	}
-	
-}
 
 /*
 UART_INT(_UART_5, ipl2){
@@ -147,7 +75,7 @@ UART_INT(_UART_6, ipl2){
 void hal_uartWriteNumber(unsigned int no){	
 	
 	if(no==0){
-		hal_sendChar_UART1('0');
+		hal_sendChar_CONSOLE_PORT('0');
 		return;
 	}
 
@@ -163,7 +91,7 @@ void hal_uartWriteNumber(unsigned int no){
 	}
 
 	for(;i>0;i--){
-		hal_sendChar_UART1(val[i]);
+		hal_sendChar_CONSOLE_PORT(val[i]);
 	}		
 }
 
@@ -191,10 +119,4 @@ void hal_uartWriteNumber(unsigned int no){
 		INTClearFlag(INT_SOURCE_UART_TX(UART3A));
 	}
 */
-
-uint8 getGSMStatus()
-{
-
-return gsm_status;
-}
 

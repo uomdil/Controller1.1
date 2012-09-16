@@ -44,7 +44,7 @@
 #include <plib.h>                   // include peripheral library function
 #include "main.h"
 #include "global.h"
-
+#include "UART.h"
 /* 
 ********************************************************************************************************* 
 *                                               DEFINES
