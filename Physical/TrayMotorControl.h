@@ -70,7 +70,7 @@ void VendMotor1(uint8 trayNo);
 void VendMotor2();
 void VendMotor3();
 void Tray_init();
-void setNoOfMotor(uint8 no);
+void testMotor(uint8 motor);
 
 /* 
 ********************************************************************************************************* 

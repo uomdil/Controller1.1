@@ -54,8 +54,6 @@ uint8 resposnse[3][5];
 uint8 first_idx=0;
 uint8 second_idx=0;
 
-uint8 noOfMotors =0;
-
 UART_SEND_CHAR(TRAY_PORT)
 
 void Tray_init()
@@ -63,12 +61,8 @@ void Tray_init()
 	UART_INIT(TRAY_PORT,TRAY_BAUDRATE,8_BITS)
 }
 
-void testMotors(){
-	uint8 i=0;
-	for(i=0;i<noOfMotors;i++){
-		VendMotor1(i+0x97);				//this depends on the first motor hex val;
-	}
-
+void testMotor(uint8 motor){
+	VendMotor1(motor+0x97);				//this depends on the first motor hex val;
 }
 
 
@@ -146,8 +140,6 @@ UART_INT(TRAY_VECTOR, ipl2){
 	
 }
 
-void setNoOfMotor(uint8 no){
-	noOfMotors = no;
-}
+
 
 

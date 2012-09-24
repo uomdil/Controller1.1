@@ -131,6 +131,11 @@ void showProductNameAndValue();
 void handlePaymentMethod();
 void handleSMSPayment();	 
 char* sendErrorMsg(char* msg);
+
+//timer
+void startWaitTimer();
+void closeWaitTimer();
+
 /* 
 ********************************************************************************************************* 
 *                                        CONFIGURATION BITS 
@@ -176,7 +181,6 @@ int main(void)
 	#ifdef DUMMY_DB_FLASH
 		setTraySize(3);
 	    setNoOfTrays(2);
-		setNoOfMotor(6);
 		char name[]="soda";
 		addData(1,1,name,5,40,0);
 		char name2[]="banana";
@@ -295,7 +299,6 @@ void stateMachine(uint8 eventId){
 			}
 			else
 			{
-				setNoOfMotors(getNoOfTrays()*getTraySize());
     	    	changeState(WAIT_AMOUNT);
    			} 	      
     	}    
@@ -956,4 +959,27 @@ char* sendErrorMsg(char* msg){
    		errorMsg[i]=msg[i];
    	}
 }
+
+
+//timer functions
+
+void startWaitTimer(){
+	OpenTimer1(T1_ON | T1_SOURCE_INT | T1_PS_1_256, SECOND);
+	ConfigIntTimer1(T1_INT_ON | T1_INT_PRIOR_5);	
+}	
+
+void closeWaitTimer(){
+	CloseTimer1();	
+	WriteTimer1(0);
+}	
+
+void __ISR(_TIMER_1_VECTOR, ipl5) WaitIntHandler(void){
+	mT3ClearIntFlag();
+
+	
+	
+}
+
+
+
 
