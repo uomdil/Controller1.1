@@ -54,6 +54,8 @@ uint8 resposnse[3][5];
 uint8 first_idx=0;
 uint8 second_idx=0;
 
+uint8 motorTest =0;
+
 UART_SEND_CHAR(TRAY_PORT)
 
 void Tray_init()
@@ -63,6 +65,7 @@ void Tray_init()
 
 void testMotor(uint8 motor){
 	VendMotor1(motor+0x97);				//this depends on the first motor hex val;
+	motorTest =1;
 }
 
 
@@ -111,24 +114,33 @@ UART_INT(TRAY_VECTOR, ipl2){
 		{                                           
 			uint8 x=UARTGetDataByte(TRAY_PORT);
 			
-			resposnse[first_idx][second_idx]=x;
-			motor_response++;
-			second_idx++;
-			if(motor_response==5 && motor <2){
-				motor_response=0;
-				enque(MOTOR_OK);
-				motor++;
-				first_idx++;
-				second_idx=0;
-				//Disp_GLCDClearDisp();
-	    		//Disp_GLCDWriteText(0,1,"motor res");
-	    		//DelayMs(1000);
-			}else if(motor_response==5 && motor==2){   //response for the third motor
-				motor_response=0;
-				enque(MOTOR_OK);
-				motor=0;
-				first_idx=0;
-				second_idx=0;
+			if(!motorTest){
+				resposnse[first_idx][second_idx]=x;
+				motor_response++;
+				second_idx++;
+				if(motor_response==5 && motor <2){
+					motor_response=0;
+					enque(MOTOR_OK);
+					motor++;
+					first_idx++;
+					second_idx=0;
+					//Disp_GLCDClearDisp();
+		    		//Disp_GLCDWriteText(0,1,"motor res");
+		    		//DelayMs(1000);
+				}else if(motor_response==5 && motor==2){   //response for the third motor
+					motor_response=0;
+					enque(MOTOR_OK);
+					motor=0;
+					first_idx=0;
+					second_idx=0;
+				}
+			}
+			else 
+			{
+				motor_response++;
+				if(motor_response == 5){
+					
+				}
 			}
 			
 		}											

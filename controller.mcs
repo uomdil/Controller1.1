@@ -9,7 +9,7 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-gcc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|Common;physical;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
-SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Physical\LCD.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-g -DPIC32_STARTER_KIT
 TraceCmdString=
@@ -22,7 +22,7 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-gcc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|Common;physical;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
-SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Physical\LCD.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-g -DPIC32_STARTER_KIT
 TraceCmdString=
@@ -35,7 +35,7 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-gcc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|Common;physical;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
-SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Physical\LCD.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-g -DPIC32_STARTER_KIT
 TraceCmdString=
@@ -48,25 +48,12 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-gcc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|Common;physical;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
-SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Physical\LCD.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-g -DPIC32_STARTER_KIT
 TraceCmdString=
 DebugOptions=
 [File004]
-Location=C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\LCD.o
-Folder=Intermediary
-DeviceName=PIC32MX795F512L
-LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
-LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
-LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-gcc.exe
-PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|Common;physical;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
-SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Physical\LCD.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
-SuiteArgsString=
-ToolArgsString=-g -DPIC32_STARTER_KIT
-TraceCmdString=
-DebugOptions=
-[File005]
 Location=C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\skpic32_glcd.o
 Folder=Intermediary
 DeviceName=PIC32MX795F512L
@@ -74,12 +61,12 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-gcc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|Common;physical;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
-SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Physical\LCD.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-g -DPIC32_STARTER_KIT
 TraceCmdString=
 DebugOptions=
-[File006]
+[File005]
 Location=C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\TimeDelay.o
 Folder=Intermediary
 DeviceName=PIC32MX795F512L
@@ -87,12 +74,12 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-gcc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|Common;physical;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
-SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Physical\LCD.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-g -DPIC32_STARTER_KIT
 TraceCmdString=
 DebugOptions=
-[File007]
+[File006]
 Location=C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\ProductDB.o
 Folder=Intermediary
 DeviceName=PIC32MX795F512L
@@ -100,12 +87,12 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-gcc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|Common;physical;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
-SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Physical\LCD.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-g -DPIC32_STARTER_KIT
 TraceCmdString=
 DebugOptions=
-[File008]
+[File007]
 Location=C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\MDB.o
 Folder=Intermediary
 DeviceName=PIC32MX795F512L
@@ -113,12 +100,12 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-gcc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|Common;physical;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
-SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Physical\LCD.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-g -DPIC32_STARTER_KIT
 TraceCmdString=
 DebugOptions=
-[File009]
+[File008]
 Location=C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\TrayMotorControl.o
 Folder=Intermediary
 DeviceName=PIC32MX795F512L
@@ -126,12 +113,12 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-gcc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|Common;physical;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
-SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Physical\LCD.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-g -DPIC32_STARTER_KIT
 TraceCmdString=
 DebugOptions=
-[File010]
+[File009]
 Location=C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\GSM.o
 Folder=Intermediary
 DeviceName=PIC32MX795F512L
@@ -139,12 +126,12 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-gcc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|Common;physical;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
-SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Physical\LCD.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-g -DPIC32_STARTER_KIT
 TraceCmdString=
 DebugOptions=
-[File011]
+[File010]
 Location=C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\NFC.o
 Folder=Intermediary
 DeviceName=PIC32MX795F512L
@@ -152,12 +139,12 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={430F471F-7ECB-4852-A80D-DEF9A5C8E751}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-gcc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|Common;physical;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
-SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Physical\LCD.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-g -DPIC32_STARTER_KIT
 TraceCmdString=
 DebugOptions=
-[File012]
+[File011]
 Location=C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\controller.elf
 Folder=Output
 DeviceName=PIC32MX795F512L
@@ -165,12 +152,12 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={C68E5105-1196-4333-A0BF-3DC57271E614}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-ld.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|Common;physical;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
-SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Physical\LCD.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Map="$(BINDIR_)$(TARGETBASE).map"
 TraceCmdString=
 DebugOptions=
-[File013]
+[File012]
 Location=C:\Users\Dilshan\Dropbox\FYP\Ongoing_work\Controller\MPLAB_codes\V1.1\controller.hex
 Folder=Output
 DeviceName=PIC32MX795F512L
@@ -178,7 +165,7 @@ LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
 LanguageToolID={C68E5105-1196-4333-A0BF-3DC57271E614}
 LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin\pic32-ld.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)|Common;physical;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\MPLAB C32 Suite\lib;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\pic32mx\lib||$(LKRDIR)||
-SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Physical\LCD.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|Logic\main.c|Physical\keys.c|Physical\UART.c|Physical\Flash_Controller.c|Common\skpic32_glcd.c|Common\TimeDelay.c|Logic\ProductDB.c|Logic\MDB.c|Physical\TrayMotorControl.c|Logic\GSM.c|Logic\NFC.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=-o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Map="$(BINDIR_)$(TARGETBASE).map"
 TraceCmdString=

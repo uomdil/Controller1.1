@@ -104,6 +104,8 @@ char globalMsg[20];
 char vendingMachineSerial[PIN_LENGTH];
 
 char errorMsg[50];
+uint8 motorTestPass = 0;
+uint32 timerCount = 0;
 
 /* 
 ********************************************************************************************************* 
@@ -135,6 +137,11 @@ char* sendErrorMsg(char* msg);
 //timer
 void startWaitTimer();
 void closeWaitTimer();
+
+
+//diagnose
+void diagnoseSystem();
+
 
 /* 
 ********************************************************************************************************* 
@@ -251,13 +258,15 @@ void stateMachine(uint8 eventId){
     
     case DIAGNOSTIC:
       	if(eventId == (uint8)INIT_VARS){
+	      	diagnoseSystem();
 	      	enque(PRODUCT_NO); 			//for test only
     	    changeState(INIT);  
     	}    
     	else if(eventId == (uint8)ERROR){	    	
 	    	enque(SEND_ERROR);
     	    changeState(SYSTEM_LOCK);
-    	}      
+    	}
+    
      break;
     
     case INIT:
@@ -804,6 +813,78 @@ uint8 getNext(uint8 index){
 }
 
 
+//fsm helper functions
+
+//diagnostic helper functions
+void diagnoseSystem(){
+	
+	//motor test
+	
+	uint8 i=0;
+	uint8 sendCommand=0;
+	uint8 errorMotors[getNoOfTrays()*getNoOfTrays()];
+	startWaitTimer();
+	while(i<getNoOfTrays()*getNoOfTrays()){
+		if(sendCommand == 0){
+			testMotor(i+0x96);
+			sendCommand =1;
+		}
+		if(motorTestPass == 1){
+			timerCount =0;
+			i++;
+			sendCommand = 0;
+		}else if(timerCount>5){
+			errorMotors[i] = 1;
+			i++;
+			timerCount =0;
+			sendCommand = 0;
+		}
+	}	
+	closeWaitTimer();
+	
+	//mdb test
+	
+	
+	
+	//gsm test
+	startWaitTimer();
+	while(isGsmInitialized){
+		if(timerCount>8){
+			Disp_GLCDClearDisp();
+    		Disp_GLCDWriteText(0, 0, "GSM NOT WORKING");
+    		DelayMs(300);
+			break;
+		}
+	}
+	
+	
+}
+
+
+void setMotorTestPass(){
+	motorTestPass =1;
+}
+
+
+
+//gsm helper functions
+
+
+char* sendErrorMsg(char* msg){
+	uint8 i=0;
+   	for(i=0;i<sizeof(msg);i++){
+   		errorMsg[i]=msg[i];
+   	}
+   	
+   	gsmSetSmsParameters(errorMsg,18);
+	gsmEnque(SEND_SMS);
+}
+
+
+
+//product purchasing mechanism helper functions
+
+
 char* genSMSPIN(){
 	VMSerial=getVMSerial();
 	uint8 i=0;
@@ -819,6 +900,7 @@ char* genSMSPIN(){
 	vendingMachineSerial[7]='\0';
 	return vendingMachineSerial;
 }
+
 
 
 void showTotalValue(){
@@ -953,12 +1035,6 @@ void handleSMSPayment(){
    	}
 }
 
-char* sendErrorMsg(char* msg){
-	uint8 i=0;
-   	for(i=0;i<sizeof(msg);i++){
-   		errorMsg[i]=msg[i];
-   	}
-}
 
 
 //timer functions
@@ -976,7 +1052,7 @@ void closeWaitTimer(){
 void __ISR(_TIMER_1_VECTOR, ipl5) WaitIntHandler(void){
 	mT3ClearIntFlag();
 
-	
+	timerCount++;
 	
 }
 
