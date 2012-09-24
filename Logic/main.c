@@ -848,7 +848,7 @@ void diagnoseSystem(){
 	
 	//gsm test
 	startWaitTimer();
-	while(isGsmInitialized){
+	while(!isGsmInitialized){
 		if(timerCount>8){
 			Disp_GLCDClearDisp();
     		Disp_GLCDWriteText(0, 0, "GSM NOT WORKING");
