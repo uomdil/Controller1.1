@@ -74,8 +74,8 @@ uint32 x =0;
 			databuff[x] = 0;		
 	}
 	#ifdef DEBUG
-		hal_sendString_UART1("row data aquired");
-		hal_sendChar_UART1('\n');
+		hal_sendString_CONSOLE_PORT("row data aquired");
+		hal_sendChar_CONSOLE_PORT('\n');
 	#endif
 }
 
@@ -92,8 +92,8 @@ uint32 x =0;
 			pagebuff[x] = 0;		
 	}
 	#ifdef DEBUG
-		hal_sendString_UART1("page data aquired");
-		hal_sendChar_UART1('\n');
+		hal_sendString_CONSOLE_PORT("page data aquired");
+		hal_sendChar_CONSOLE_PORT('\n');
 	#endif
 }
 		
@@ -102,8 +102,8 @@ void erase_flash_page(uint32 page){	  //number from 0,1,2...
 
  	NVMErasePage((void *)(NVM_PROGRAM_PAGE+page*NVM_PAGE_SIZE));  //erase the required page
  	#ifdef DEBUG
- 		hal_sendString_UART1("page erased ");
-		hal_sendChar_UART1('\n');
+ 		hal_sendString_CONSOLE_PORT("page erased ");
+		hal_sendChar_CONSOLE_PORT('\n');
 	#endif
 }
 
@@ -117,8 +117,8 @@ void write_flash_word(uint32 data, uint32 address){
 	{
 		//indicate an error
 		#ifdef DEBUG
-			hal_sendString_UART1("word write error ");
-			hal_sendChar_UART1('\n');
+			hal_sendString_CONSOLE_PORT("word write error ");
+			hal_sendChar_CONSOLE_PORT('\n');
 		#endif
 	}
 }
@@ -135,8 +135,8 @@ void write_flash_row(uint32* data, uint32 length, uint32 page, uint32 row){
 	{
 		// indicate an error
 		#ifdef DEBUG
-			hal_sendString_UART1("data write error ");
-			hal_sendChar_UART1('\n');
+			hal_sendString_CONSOLE_PORT("data write error ");
+			hal_sendChar_CONSOLE_PORT('\n');
 		#endif
 	}
 }	
@@ -155,8 +155,8 @@ void write_flash_page(uint32* data, uint32 length, uint32 number){
 	{
 		// indicate an error
 		#ifdef DEBUG
-			hal_sendString_UART1("page write error ");
-			hal_sendChar_UART1('\n');
+			hal_sendString_CONSOLE_PORT("page write error ");
+			hal_sendChar_CONSOLE_PORT('\n');
 		#endif
 	}
 }
@@ -169,8 +169,8 @@ uint32 read_flash_word(uint32 address){
 	memcpy(&word, (void *)(address), sizeof(word)); 
 	
 	#ifdef DEBUG
-		hal_sendString_UART1("reading word");
-		hal_sendChar_UART1('\n');
+		hal_sendString_CONSOLE_PORT("reading word");
+		hal_sendChar_CONSOLE_PORT('\n');
 	#endif
 	
 	return word;
@@ -182,12 +182,12 @@ uint32* read_flash_row(uint32 length, uint32 page, uint32 row){
 	memcpy(databuff, (void *)(NVM_PROGRAM_PAGE+page*NVM_PAGE_SIZE+row*NVM_ROW_SIZE), sizeof(databuff)); 
 	
 	#ifdef DEBUG
-		hal_sendString_UART1("reading row");
-		hal_sendChar_UART1('\n');
+		hal_sendString_CONSOLE_PORT("reading row");
+		hal_sendChar_CONSOLE_PORT('\n');
 		/*for(i=0;i<length ;i++){
 			hal_uartWriteNumber(databuff[i]);
 			hal_uartWriteNumber(i);
-			hal_sendChar_UART1('\n');	
+			hal_sendChar_CONSOLE_PORT('\n');	
 		}*/
 	#endif
 	
@@ -200,12 +200,12 @@ uint32* read_flash_page(uint32 length, uint32 page){
 	memcpy(pagebuff, (void *)(NVM_PROGRAM_PAGE+page*NVM_PAGE_SIZE), sizeof(pagebuff)); 
 	
 	#ifdef DEBUG
-		hal_sendString_UART1("reading page");
-		hal_sendChar_UART1('\n');
+		hal_sendString_CONSOLE_PORT("reading page");
+		hal_sendChar_CONSOLE_PORT('\n');
 		/*for(i=0;i<length ;i++){
 			hal_uartWriteNumber(pagebuff[i]);
 			hal_uartWriteNumber(i);
-			hal_sendChar_UART1('\n');	
+			hal_sendChar_CONSOLE_PORT('\n');	
 		}*/
 	#endif
 	

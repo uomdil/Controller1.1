@@ -54,7 +54,7 @@
 
 
 //for console
-#define SHOW_MESSAGES
+//#define SHOW_MESSAGES
 
 
 #define ON  1 
@@ -73,27 +73,25 @@
 #define SECOND					SYS_FREQ/PB_DIV/PRESCALE
 
 
+
 //define state IDs of the controller
 
-#define START				0
-#define DIAGNOSTIC			1
-#define INIT				2
-#define UPDATE_VARS			3
-#define WAIT_MONEY			4
-#define WAIT_PRODUCT		5
-#define WAIT_AMOUNT			6
-#define SMS_PAY				7
-#define DISPENSE			8
-#define PAYMENT_METHOD		9
-#define SYSTEM_LOCK			10
-#define NFC_PAY				11
-#define GSM_CONTROL			12
-
+#define START				1
+#define DIAGNOSTIC			2
+#define INIT				3
+#define UPDATE_VARS			4
+#define WAIT_MONEY			5
+#define WAIT_PRODUCT		6
+#define WAIT_AMOUNT			7
+#define SMS_PAY				8
+#define DISPENSE			9
+#define PAYMENT_METHOD		10
+#define SYSTEM_LOCK			11
+#define NFC_PAY				12
 
 
 //define event IDs for controller
 
-#define DIAGNOSE			0
 #define INIT_VARS			1
 #define UPDATE_DATA			2
 #define FIN					3
@@ -117,14 +115,17 @@
 #define MOTOR_OK			21
 #define NFC_INFO			22
 #define NFC_CONFIRM			23
-#define GSM_UNIT_SMS_RECVD	24
+#define DIAGNOSE			24
+#define GSM_UNIT_SMS_RECVD	25
+#define NFC_OK				26
 
 //special error events
-#define GSM_ERROR				25
-#define GSM_NOT_RESPONDING  	26
-#define NFC_ERROR				27
-#define NFC_UNIT_NOT_RESPONDING	28
-
+#define GSM_ERROR				27
+#define GSM_NOT_RESPONDING 		28
+#define LOCK_DOWN				29
+#define NFC_UNIT_NOT_RESPONDING	30
+#define NFC_ERROR				31
+#define MOTOR_ERROR				32
 
 
 #define NO_OF_EVENTS	4

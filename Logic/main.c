@@ -58,6 +58,13 @@
 #define PIN_LENGTH 8
 #define NFC_MSG_LENGTH 20
 
+
+//#define MONEY_STATE 
+//#define SMS_STATE  
+//#define DEBUG 
+//#define DUMMY_CURRNCY_VAL   // for 2000 val
+#define DUMMY_DB_FLASH 
+
 /* 
 ********************************************************************************************************* 
 *                                          GLOBAL VARIABLES 
@@ -96,6 +103,8 @@ uint32 VMSerial;
 char globalMsg[20];
 char vendingMachineSerial[PIN_LENGTH];
 
+char errorMsg[50];
+
 /* 
 ********************************************************************************************************* 
 *                                        FUNCTION PROTOTYPES 
@@ -116,6 +125,12 @@ uint8 getNext(uint8 index);
 //GSM
 char* genSMSPIN();
 
+//FSM helper functions
+void showTotalValue();
+void showProductNameAndValue();
+void handlePaymentMethod();
+void handleSMSPayment();	 
+char* sendErrorMsg(char* msg);
 /* 
 ********************************************************************************************************* 
 *                                        CONFIGURATION BITS 
@@ -143,19 +158,6 @@ char* genSMSPIN();
 
 
 
-
-
-/* 
-********************************************************************************************************* 
-*                                        DEFINES 
-********************************************************************************************************* 
-*/ 
-
-//#define MONEY_STATE 
-//#define SMS_STATE  
-//#define DEBUG 
-
-
 int main(void)
 {
 	board_init();												//Initialize the circuit board configurations
@@ -175,8 +177,10 @@ int main(void)
 		setTraySize(3);
 	    setNoOfTrays(2);
 		
-		char name[]="Dilshan";
-		addData(1,1,name,5,500,0);
+		char name[]="soda";
+		addData(1,1,name,5,40,0);
+		char name2[]="banana";
+		addData(1,2,name2,3,20,0);
 		
 		flashDB();
 	#endif
@@ -210,7 +214,6 @@ int main(void)
      	//mdbStateMachine();
      	//gsmStateMachine();
 
-     	gsmStateMachine();
      	
   	}	
   	
@@ -225,7 +228,7 @@ void board_init(){
 	keypad_init();						//Initialize keypad
 	Disp_Init();
 	Disp_GLCDInit();
-	gsmInit();							//GSM init
+	//gsmInit();							//GSM init
 	//hal_mdbInit();					//MDB Init
 	//NFC_Init();						//NFC Init
 	InitDB();							//product database init
@@ -236,7 +239,7 @@ void board_init(){
 void stateMachine(uint8 eventId){
   switch(state){
     case START :
-    	if(eventId == (uint8)DIAGNOSTIC){
+    	if(eventId == (uint8)DIAGNOSE){
 	    	enque(INIT_VARS);
     	    changeState(DIAGNOSTIC);
     	}          	
@@ -299,7 +302,6 @@ void stateMachine(uint8 eventId){
 	    	check_key()
 	    	if(keyPressCount<3 && key<10){
 		 		product_no=product_no*10+key;
-		 		//write to LCD
 		 		Disp_GLCDClearDisp();
 		 		Disp_GLCDWriteText(0,0,"Entered Value");
 				
@@ -315,8 +317,7 @@ void stateMachine(uint8 eventId){
     	else if(eventId == (uint8)CANCEL){
 	    	product_no=0;
 	    	enque(PRODUCT_NO);
-    	    changeState(INIT);
-	    	
+    	    changeState(INIT);	
     	}
     	
       
@@ -328,67 +329,18 @@ void stateMachine(uint8 eventId){
 				hal_sendString_UART1("Got amount");
 				hal_sendChar_UART1('\n');
 			#endif
-			if(tbl[product_no].amount<amount)
-			{
-				Disp_GLCDClearDisp();
-		 		Disp_GLCDWriteText(0,0,"AMOUNT EXCEEDED");
-		 		DelayMs(100);
-		 		amount=0;
-		 		changeState(WAIT_AMOUNT);
-			}
-			else if(amount==0)		//if the amount wasnt entered
-			{
-				amount=1;
-				total=amount*tbl[product_no].valDec;
-				Disp_GLCDClearDisp();
-		 		Disp_GLCDWriteText(0,3,"Total = ");
-		 		
-		 		Disp_GLCDNumber(total,1,3,1);
-		 			 			
-    	    	changeState(PAYMENT_METHOD); 
-			}
-			else 
-			{
-				total=amount*tbl[product_no].valDec;
-				Disp_GLCDClearDisp();
-		 		Disp_GLCDWriteText(0,3,"Total = ");
-		 		
-		 		Disp_GLCDNumber(total,1,3,1);
-		 		
-    	    	changeState(PAYMENT_METHOD);  
-   			} 	    
+			showTotalValue(); 	    
     	}    
     	else if(eventId == (uint8)ENTER_NO){
 	    	check_key()
 	    	if(keyPressCount<3 && key<10){	
 		 		amount=amount*10+key;
-		 		//write to LCD
 		 		Disp_GLCDClearDisp();
 		 		Disp_GLCDWriteText(0,0,"Amount Entered");
 		 		
 		 		Disp_GLCDNumber(amount,1,3,1);
 		 		
-				uint32 *nm=tbl[product_no].name;
-				uint8 i=0;
-				
-				for(i=0;i<WORD_SIZE/2;i++){
-					char tmp = *nm;
-					if((tmp>='a' && tmp <='z' )|| (tmp>='A' && tmp<='Z')){
-						Disp_GLCDWrite(i,2,*nm);
-						nm++;
-					}
-					tmp = *nm;	
-					if((tmp>='a' && tmp <='z' )|| (tmp>='A' && tmp<='Z')){	
-						Disp_GLCDData(*nm);
-						nm++;
-					}
-				}
-				
-				uint32 valD=tbl[product_no].valDec;
-				uint32 valC=tbl[product_no].valCent;
-	 			Disp_GLCDWriteText(0,3,"Price:");
-	 			
-	 			Disp_GLCDNumber(valD,3,4,1); 			
+				showProductNameAndValue();		
 	 			
 		 		#ifdef DEBUG
 					hal_sendString_UART1("amount = ");
@@ -419,30 +371,7 @@ void stateMachine(uint8 eventId){
     	}
     	else if(eventId == (uint8)ENTER_NO){
 	    	check_key()
-	    	if(key==1)
-	     	{
-     			changeState(WAIT_MONEY);
-     		}
-     		else if(key==2)
-     		{
-	     		if(isGsmInitialized == 0){
-    				enque(ENTER_NO);
-   				}
-	     		else{
-     				changeState(SMS_PAY);
-     			}	
-     		}	
-     		else if(key==3)
-     		{
-	     		if(isGsmInitialized == 0){
-    				enque(ENTER_NO);
-   				}
-	     		else{
-	     			enque(NFC_INFO);
-     				changeState(NFC_PAY);
-     			}
-     		}	
-	    	
+	    	handlePaymentMethod();
 	    }	
     	else if(eventId == (uint8)ERROR){
 	    	enque(SEND_ERROR);
@@ -469,8 +398,6 @@ void stateMachine(uint8 eventId){
 	 		#ifdef MONEY_STATE
 	    		enque(OK);
     		#endif 
-	 			
-	 		
 	    	}
     	}
     	
@@ -488,7 +415,9 @@ void stateMachine(uint8 eventId){
 	    	check_key()
 	    }
 	    else if(eventId == (uint8)OK){
-		    enteredValue = 2000;
+		    #ifdef DUMMY_CURRNCY_VAL
+		    	enteredValue = 2000;
+		    #endif
 		    balance=enteredValue-total;
 	    	if(balance>=0){
 		    	Disp_GLCDClearDisp();
@@ -506,49 +435,17 @@ void stateMachine(uint8 eventId){
     	    enque(FIRST_MOTOR);
     	}  
     	else if(eventId == (uint8)GSM_UNIT_ERROR){
-	    	enque(GSM_ERROR);
-	    	changeState(SYSTEM_LOCK);
+	    	Disp_GLCDClearDisp();
+		    Disp_GLCDWriteText(0,0,"GSM ERROR");
+		    //should stop sms paynment 
     	}
     	else if(eventId == (uint8)GSM_UNIT_NOT_RESPONDING){
-	    	enque(GSM_NOT_RESPONDING);
-	    	changeState(SYSTEM_LOCK);
 	    	Disp_GLCDClearDisp();
-		    Disp_GLCDWriteText(0,0,"NO RESPONSE");
+		    Disp_GLCDWriteText(0,0,"GSM NO RESPONSE");
+		    //should stop sms paynment 
     	}
     	else if(eventId == (uint8)GSM_UNIT_SMS_RECVD){
-
-			Disp_GLCDClearDisp();
-			char smsState=gsmPaymentInfo[0][0];
-			
-			uint8 i=0;
-	    	uint8 pinMatch=1;
-	    	for(i=0;i<PIN_LENGTH;i++){
-		    	if(vendingMachineSerial[i] != gsmPaymentInfo[3][i]){
-		    		pinMatch=0;
-		    	}
-	    	}   	
-	    	
-	    	if(smsState =='1' && pinMatch ==1){
-			    	Disp_GLCDWriteText(0, 0,"SUCCESS");
-			    	Disp_GLCDWriteText(0, 1,"Initials: ");
-			    	Disp_GLCDWriteText(5, 1, gsmPaymentInfo[1]);
-			    	Disp_GLCDWriteText(0, 2,"Payment: ");				//fill blah with suitable words
-			    	Disp_GLCDWriteText(5, 2, gsmPaymentInfo[2]);		//then change 3 to ceil(no of chars above/2)
-			    	Disp_GLCDWriteText(0, 3,"PIN: ");
-			    	Disp_GLCDWriteText(3, 3, gsmPaymentInfo[3]);
-		    		DelayMs(500);
-		    		enque(OK);
-	    	}
-	    	else if(smsState == '1' && pinMatch ==0){
-	    		Disp_GLCDWriteText(0, 0,"PIN MISMATCH");
-	    		DelayMs(500);
-	    		enque(CANCEL);
-	    	}
-	    	else if(smsState == '0'){
-	    		Disp_GLCDWriteText(0, 0,"FAILURE");
-	    		DelayMs(500);
-	    		enque(CANCEL);
-	    	}	    	
+			handleSMSPayment();	    	
     	}
     	else if(eventId == (uint8)CANCEL){
 	    	amount=0;
@@ -576,8 +473,9 @@ void stateMachine(uint8 eventId){
      		amount=0;
 	    	product_no=0;
 	    	enteredValue =0;
-	    	enque(GSM_ERROR);
-	    	changeState(SYSTEM_LOCK);
+	    	Disp_GLCDClearDisp();
+		    Disp_GLCDWriteText(0,0,"GSM ERROR");
+		    //should stop nfc paynment 
      	}
      	else if(CANCEL){
      		amount=0;
@@ -593,7 +491,13 @@ void stateMachine(uint8 eventId){
     	    changeState(INIT);  
     	}    
     	else if(eventId == (uint8)ERROR){
-	    	enque(ERROR);
+	    	sendErrorMsg("SENSOR NOT WORKING");
+	    	enque(LOCK_DOWN);
+			changeState(SYSTEM_LOCK);
+    	}
+    	else if(eventId == (uint8)MOTOR_ERROR){
+	    	sendErrorMsg("MOTOR NOT WORKING"); //add motor no
+	    	enque(LOCK_DOWN);
 			changeState(SYSTEM_LOCK);
     	}
     	else if(eventId == (uint8)FIRST_MOTOR){
@@ -649,35 +553,17 @@ void stateMachine(uint8 eventId){
       
     case SYSTEM_LOCK:
     	if(eventId == (uint8)SEND_ERROR){
-	    	enque(SEND_ERROR);
-    	    changeState(GSM_CONTROL);  
+ 			gsmSetSmsParameters(errorMsg,18);
+	      	gsmEnque(SEND_SMS);
     	} 
-      	else if(eventId == (uint8)GSM_ERROR){
+    	else if(eventId == (uint8)LOCK_DOWN){
     	      
-    	} 
-        else if(eventId == (uint8)GSM_NOT_RESPONDING){
-    	      
-    	} 
-    	//else if(eventId == (uint8)LOCK_DOWN){
-    	      
-    	//}
+    	}
     	
     	
     	
      break;
-      
-;
-      
-    case GSM_CONTROL:
-    	if(eventId == (uint8)NFC_SET_CONFIRM){
-    	    changeState(NFC_PAY);  
-    	}
-    	else if(eventId == (uint8)SEND_ERROR){
-    		
-    	}
-      
-     break;
-        
+         
     default:
     
      break;
@@ -699,7 +585,6 @@ void changeState(uint8 nextStateId){
 void onStateEntry(uint8 stateId){
   switch(stateId){
     case START :
-    
           	
       break;
     
@@ -727,7 +612,7 @@ void onStateEntry(uint8 stateId){
 	    Disp_GLCDWriteText(0, 0, " INSERT MONEY");
 	    Disp_GLCDWriteText(0,1,"Total = ");
 		
-		Disp_GLCDNumber(enteredValue,1,3,1);
+		Disp_GLCDNumber(total,1,3,1);
 		keyuse=PRODUCT_SELECT;
 		
 		canAcceptBills=1;
@@ -804,11 +689,6 @@ void onStateEntry(uint8 stateId){
       
       break;
       
-      
-    case GSM_CONTROL:
-      
-      break;
-    
     default:
     
       break;
@@ -873,11 +753,7 @@ void onStateExit(uint8 stateId){
     case NFC_PAY:
       
       break;
-      
-    case GSM_CONTROL:
-      
-      break;
-    
+         
     default:
     
       break;
@@ -929,7 +805,7 @@ char* genSMSPIN(){
 	uint8 i=0;
 	for(i=0;i<4;i++){
 		vendingMachineSerial[i]=VMSerial%26+'A';
-		VMSerial = VMSerial/10;
+		VMSerial = VMSerial/26;
 	}
 	uint32 tot=total;
 	for(i=0;i<3;i++){
@@ -940,4 +816,143 @@ char* genSMSPIN(){
 	return vendingMachineSerial;
 }
 
+
+void showTotalValue(){
+	if(tbl[product_no].amount<amount)
+	{
+		Disp_GLCDClearDisp();
+		Disp_GLCDWriteText(0,0,"AMOUNT EXCEEDED");
+		DelayMs(100);
+		amount=0;
+		changeState(WAIT_AMOUNT);
+	}
+	else if(amount==0)		//if the amount wasnt entered
+	{
+		amount=1;
+		total=amount*tbl[product_no].valDec;
+		Disp_GLCDClearDisp();
+		Disp_GLCDWriteText(0,0,"Total = ");
+		
+		Disp_GLCDNumber(total,0,4,1);
+		DelayMs(300);	 			
+	 	changeState(PAYMENT_METHOD); 
+	}
+	else 
+	{
+		total=amount*tbl[product_no].valDec;
+		Disp_GLCDClearDisp();
+		Disp_GLCDWriteText(0,0,"Total = ");
+		
+		Disp_GLCDNumber(total,0,4,1);
+		DelayMs(300);
+		changeState(PAYMENT_METHOD);  
+	}
+}
+
+
+void showProductNameAndValue(){
+	uint32 *nm=tbl[product_no].name;
+	uint8 i=0;
+	
+	for(i=0;i<WORD_SIZE/2;i++){
+		char tmp = *nm;
+		if((tmp>='a' && tmp <='z' )|| (tmp>='A' && tmp<='Z')){
+			Disp_GLCDWrite(i,2,*nm);
+			nm++;
+		}
+		tmp = *nm;	
+		if((tmp>='a' && tmp <='z' )|| (tmp>='A' && tmp<='Z')){	
+			Disp_GLCDData(*nm);
+			nm++;
+		}
+	}
+	
+	uint32 valD=tbl[product_no].valDec;
+	uint32 valC=tbl[product_no].valCent;
+	Disp_GLCDWriteText(0,3,"Price:");
+	Disp_GLCDNumber(valD,3,4,1); 	
+}
+
+
+void handlePaymentMethod(){
+	Disp_GLCDClearDisp();
+    Disp_GLCDWriteText(0, 0, "PAYMENT METHOD");
+   	Disp_GLCDWriteText(0, 1, "1: CURRENCY");
+   	Disp_GLCDWriteText(0, 2, "2: SMS");
+   	Disp_GLCDWriteText(0, 3, "3: NFC");
+   	if(key==1)
+    {
+   		changeState(WAIT_MONEY);
+   	}
+   	else if(key==2)
+   	{
+    	if(isGsmInitialized == 0){
+  			enque(ENTER_NO);
+  			Disp_GLCDClearDisp();
+    		Disp_GLCDWriteText(0, 0, "SMS DISABLED");
+    		DelayMs(200);
+    		key=0;
+ 		}
+    	else{
+   			changeState(SMS_PAY);
+   		}	
+   	}	
+   	else if(key==3)
+   	{
+ 		if(isGsmInitialized == 0){
+			enque(ENTER_NO);
+			Disp_GLCDClearDisp();
+    		Disp_GLCDWriteText(0, 0, "NFC DISABLED");
+    		DelayMs(200);
+    		key=0;
+ 		}
+   		else{
+    		enque(NFC_INFO);
+   			changeState(NFC_PAY);
+   		}
+   	}
+}
+
+void handleSMSPayment(){
+	Disp_GLCDClearDisp();
+	char smsState=gsmPaymentInfo[0][0];
+	
+	uint8 i=0;
+   	uint8 pinMatch=1;
+   	for(i=0;i<PIN_LENGTH;i++){
+    	if(vendingMachineSerial[i] != gsmPaymentInfo[3][i]){
+    		pinMatch=0;
+    		break;
+    	}
+   	}   	
+   	
+   	if(smsState =='1' && pinMatch ==1){
+	    	Disp_GLCDWriteText(0, 0,"SUCCESS");
+	    	Disp_GLCDWriteText(0, 1,"Initials: ");
+	    	Disp_GLCDWriteText(5, 1, gsmPaymentInfo[1]);
+	    	Disp_GLCDWriteText(0, 2,"Payment: ");				
+	    	Disp_GLCDWriteText(5, 2, gsmPaymentInfo[2]);		
+	    	Disp_GLCDWriteText(0, 3,"TID No: ");
+	    	Disp_GLCDWriteText(4, 3, gsmPaymentInfo[3]);
+    		DelayMs(500);
+    		enque(OK);
+   	}
+   	else if(smsState == '1' && pinMatch ==0){
+   		Disp_GLCDWriteText(0, 0,"PIN MISMATCH");
+   		DelayMs(500);
+   		enque(CANCEL);
+   	}
+   	else if(smsState == '0'){
+   		Disp_GLCDWriteText(0, 0,"FAILURE");
+   		DelayMs(500);
+   		enque(CANCEL);
+   	}
+}
+
+char* sendErrorMsg(char* msg){
+	uint8 i=0;
+   	for(i=0;i<sizeof(msg);i++){
+   		errorMsg[i]=msg[i];
+   	}
+}
 

@@ -39,10 +39,10 @@
 //HAL defines
 
 //UART allocation
-//UART1A - UART1 
+//CONSOLE_PORTA - CONSOLE_PORT 
 //UART3A - UART2 
 //UART2A - UART3 
-//UART1B - UART4 
+//CONSOLE_PORTB - UART4 
 //UART3B - UART5 
 //UART2B - UART6
 
@@ -165,7 +165,7 @@
 
 #define NO_OF_BILLS	16
 
-//#define MDB_DEBUG
+#define MDB_DEBUG
 
 /* 
 ********************************************************************************************************* 
@@ -327,19 +327,19 @@ void sendMdbPacket(unsigned int command,unsigned int unit){
 	unsigned int length = preparePacket(command,unit);
 	unsigned int i = 0;
 	#ifdef MDB_DEBUG
-		hal_sendString_UART1("tx");
+		hal_sendString_CONSOLE_PORT("tx");
 	#endif
 	for(;i<length;i++){
 		hal_uartSend9bitData_MDB_PORT(mdbPacketTx[i]);
 		#ifdef MDB_DEBUG
-			hal_sendChar_UART1(mdbPacketTx[i]);
+			hal_sendChar_CONSOLE_PORT(mdbPacketTx[i]);
 		#endif
 	}
 	
 	mdbPacketTx[i] = generateCheckSum(length,mdbPacketTx);
 	hal_uartSend9bitData_MDB_PORT(mdbPacketTx[i]);
 	#ifdef MDB_DEBUG
-		hal_sendChar_UART1(mdbPacketTx[i]);
+		hal_sendChar_CONSOLE_PORT(mdbPacketTx[i]);
 	#endif
 	lengthTx = length+1;	
 	
@@ -349,8 +349,8 @@ void sendAck(){
 	mdbPacketTx[0] = ACK;
 	lengthTx = 1;
 	#ifdef MDB_DEBUG
-		hal_sendString_UART1("tx");
-		hal_sendChar_UART1(mdbPacketTx[0]);
+		hal_sendString_CONSOLE_PORT("tx");
+		hal_sendChar_CONSOLE_PORT(mdbPacketTx[0]);
 	#endif 
 	hal_uartSend9bitData_MDB_PORT(mdbPacketTx[0]);
 	
@@ -454,7 +454,7 @@ void processRxPacket(){
 	//checking checksum
 	if( (mdbPacketRx[contentLength]^MODE_BIT) != generateCheckSum(contentLength,mdbPacketRx) ){
 		#ifdef MDB_DEBUG
-			hal_sendString_UART1("cerror");
+			hal_sendString_CONSOLE_PORT("cerror");
 		#endif
 		return;
 	}	
@@ -589,7 +589,7 @@ void mdbStateMachine(){
 					}
 					mdbState = IDLE_STATE;
 					#ifdef MDB_DEBUG
-						hal_sendString_UART1("over");
+						hal_sendString_CONSOLE_PORT("over");
 					#endif
 				}
 				else if(eventId == RETRY){
@@ -684,7 +684,7 @@ UART_INT(MDB_VECTOR, ipl2){
 			
 			receivePacket(temp);
 			#ifdef MDB_DEBUG
-				hal_sendChar_UART1(temp);
+				hal_sendChar_CONSOLE_PORT(temp);
 			#endif
 			//mdbEnque(MESSAGE_RECEIVED);
 		}
@@ -769,5 +769,3 @@ uint8 mdbGetNext(uint8 index){
 
 
 
-
-		

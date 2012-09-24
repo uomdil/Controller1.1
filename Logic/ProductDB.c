@@ -121,7 +121,7 @@ void addData(uint32 trayNum,uint32 num,char name[],uint32 amount,uint32 valDec,u
 		uint8 i;
 		for(i=0;i<WORD_SIZE;i++){
 			uint8 tmp =name[i];
-			if((tmp>'a' && tmp <'z' )|| (tmp>'A' && tmp<'Z')){
+			if((tmp>='a' && tmp <='z' )|| (tmp>='A' && tmp<='Z')){
 			tbl[idx].name[i]=(uint32)name[i];
 			}
 			else

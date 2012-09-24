@@ -6,6 +6,9 @@
 #include "graphics.h"
 #include "global.h"
 
+#define WR  PORTCbits.RC2
+#define PSB	PORTGbits.RG12
+
 void Disp_Init(){
 
 
@@ -19,8 +22,8 @@ mPORTCOpenDrainOpen(BIT_3|BIT_2|BIT_1);
 mPORTEOpenDrainOpen(BIT_2|BIT_3|BIT_4|BIT_5|BIT_6|BIT_7);
 mPORTGOpenDrainOpen(BIT_12|BIT_13|BIT_14|BIT_15);
 
-PORTCbits.RC2=0;	//WR
-PORTGbits.RG12=1; 	//PSB 
+WR=0;	//WR
+PSB=1; 	//PSB 
 
 }
 

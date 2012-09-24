@@ -62,6 +62,13 @@ void Tray_init()
 	UART_INIT(TRAY_PORT,TRAY_BAUDRATE,8_BITS)
 }
 
+void testMotors(){
+	uint8 i=0;
+	for(i=0;i<)
+
+}
+
+
 void VendMotor1(uint8 trayNo)
 {
 	//motor1
