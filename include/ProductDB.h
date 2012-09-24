@@ -120,6 +120,8 @@ Table getTable(uint32 trayNum,uint32 num);
 void flashDB();
 void setTraySize(uint32 size);
 void setNoOfTrays(uint32 num);
+uint32 getNoOfTrays();
+uint32 getTraySize();
 void process();
 uint32 getVMSerial();
 

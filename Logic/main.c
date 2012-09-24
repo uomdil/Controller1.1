@@ -176,7 +176,7 @@ int main(void)
 	#ifdef DUMMY_DB_FLASH
 		setTraySize(3);
 	    setNoOfTrays(2);
-		
+		setNoOfMotor(6);
 		char name[]="soda";
 		addData(1,1,name,5,40,0);
 		char name2[]="banana";
@@ -295,6 +295,7 @@ void stateMachine(uint8 eventId){
 			}
 			else
 			{
+				setNoOfMotors(getNoOfTrays()*getTraySize());
     	    	changeState(WAIT_AMOUNT);
    			} 	      
     	}    
