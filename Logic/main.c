@@ -367,6 +367,9 @@ void stateMachine(uint8 eventId){
 	    	product_no=0;
     	    changeState(WAIT_PRODUCT);  
     	}
+    	else if(eventId == (uint8)TIME_OUT){
+	    	enque(CANCEL);
+    	}
     
      break;
     
@@ -389,6 +392,9 @@ void stateMachine(uint8 eventId){
     	else if(eventId == (uint8)ERROR){
 	    	enque(SEND_ERROR);
     	    changeState(SYSTEM_LOCK);
+    	}
+    	else if(eventId == (uint8)TIME_OUT){
+	    	enque(CANCEL);
     	}
       
      break;
@@ -422,7 +428,7 @@ void stateMachine(uint8 eventId){
     	    changeState(INIT);
     	}
     	else if(eventId == (uint8)TIME_OUT){
-	    	
+	    	enque(CANCEL);
     	}
     	else if(eventId == (uint8)ENTER_NO){
 	    	check_key()
@@ -467,6 +473,9 @@ void stateMachine(uint8 eventId){
 	    	enque(PRODUCT_NO);
     	    changeState(INIT);
     	}
+    	else if(eventId == (uint8)TIME_OUT){
+	    	enque(CANCEL);
+    	}
     	
      break;
   
@@ -496,7 +505,10 @@ void stateMachine(uint8 eventId){
 	    	enteredValue =0;
 	    	enque(PRODUCT_NO);
     	    changeState(INIT);
-     	}		
+     	}
+     	else if(eventId == (uint8)TIME_OUT){
+	    	enque(CANCEL);
+    	}		
      break;
     
     case DISPENSE:
@@ -621,6 +633,9 @@ void onStateEntry(uint8 stateId){
     break;
     
     case WAIT_MONEY:
+    
+    	startWaitTimer();
+    	
 	    Disp_GLCDClearDisp();
 	    Disp_GLCDWriteText(0, 0, " INSERT MONEY");
 	    Disp_GLCDWriteText(0,1,"Total = ");
@@ -632,6 +647,7 @@ void onStateEntry(uint8 stateId){
     break;
     
     case WAIT_PRODUCT:
+    
 	    Disp_GLCDClearDisp();
 		Disp_GLCDWriteText(0, 0, "INSERT PRODUCT");
 		Disp_GLCDWriteText(0, 1,"NUMBER");
@@ -658,6 +674,9 @@ void onStateEntry(uint8 stateId){
     break;
     
     case WAIT_AMOUNT:
+    
+    	startWaitTimer();
+    
 	    Disp_GLCDClearDisp();
 		DelayMs(20);
 	    Disp_GLCDWriteText(0, 0, " ENTER QUANTITY");
@@ -672,6 +691,8 @@ void onStateEntry(uint8 stateId){
       break;
     
     case PAYMENT_METHOD:
+    
+    	startWaitTimer();
     	
     	Disp_GLCDClearDisp();
 	    Disp_GLCDWriteText(0, 0, "PAYMENT METHOD");
@@ -683,11 +704,17 @@ void onStateEntry(uint8 stateId){
     break;
     
     case NFC_PAY:
+    
+    	startWaitTimer();
+    
       	Disp_GLCDClearDisp();
 		Disp_GLCDWriteText(0, 0, "USE NFC CARD");
       break;
       
     case SMS_PAY:
+    
+    	startWaitTimer();
+    	
       	Disp_GLCDClearDisp();
 	    Disp_GLCDWriteText(0, 0, "PIN NUMBER");
 	    char* serial=genSMSPIN();
@@ -823,24 +850,27 @@ void diagnoseSystem(){
 	uint8 i=0;
 	uint8 sendCommand=0;
 	uint8 errorMotors[getNoOfTrays()*getNoOfTrays()];
-	startWaitTimer();
+	
 	while(i<getNoOfTrays()*getNoOfTrays()){
-		if(sendCommand == 0){
-			testMotor(i+0x96);
+		if(sendCommand == 0){			//previous command was not sent
+			startWaitTimer();
+			testMotor(i);
 			sendCommand =1;
 		}
-		if(motorTestPass == 1){
+		if(motorTestPass == 1){			//motor response received
 			timerCount =0;
 			i++;
 			sendCommand = 0;
-		}else if(timerCount>5){
+			closeWaitTimer();
+		}else if(timerCount>5){			//timeout occurs, no response received
 			errorMotors[i] = 1;
 			i++;
 			timerCount =0;
 			sendCommand = 0;
+			closeWaitTimer();
 		}
 	}	
-	closeWaitTimer();
+	
 	
 	//mdb test
 	
@@ -849,7 +879,9 @@ void diagnoseSystem(){
 	//gsm test
 	startWaitTimer();
 	while(!isGsmInitialized){
-		if(timerCount>8){
+		if(timerCount>10){			//time out
+			timerCount=0;
+			closeWaitTimer();
 			Disp_GLCDClearDisp();
     		Disp_GLCDWriteText(0, 0, "GSM NOT WORKING");
     		DelayMs(300);
@@ -1052,8 +1084,12 @@ void closeWaitTimer(){
 void __ISR(_TIMER_1_VECTOR, ipl5) WaitIntHandler(void){
 	mT3ClearIntFlag();
 
-	timerCount++;
-	
+	timerCount++;	
+	if(timerCount>20){
+		enque(TIME_OUT);
+		timerCount=0;
+		closeWaitTimer();
+	}
 }
 
 

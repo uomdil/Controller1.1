@@ -30,6 +30,7 @@
 */ 
 
 #include "TrayMotorControl.h"
+#include "main.h"
 
 /* 
 ********************************************************************************************************* 
@@ -139,7 +140,8 @@ UART_INT(TRAY_VECTOR, ipl2){
 			{
 				motor_response++;
 				if(motor_response == 5){
-					
+					motor_response=0;
+					setMotorTestPass();
 				}
 			}
 			
