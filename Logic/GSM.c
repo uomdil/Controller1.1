@@ -66,11 +66,11 @@ All rights reserved
 
 
 
-#define PB_DIV                 	8
+/*#define PB_DIV                 	8
 #define PRESCALE               	256
 #define MILLISECOND				SYS_FREQ/PB_DIV/PRESCALE/1000
 #define SECOND					SYS_FREQ/PB_DIV/PRESCALE
-
+*/
 #define GSM_DEBUG
 
 

@@ -67,10 +67,11 @@
 #define	GetPeripheralClock()		(GetSystemClock()/(1 << OSCCONbits.PBDIV))
 #define	GetInstructionClock()		(GetSystemClock())
 
-#define PB_DIV                 	8
+#define PB_DIV                 	1
 #define PRESCALE               	256
 #define MILLISECOND				SYS_FREQ/PB_DIV/PRESCALE/1000
 #define SECOND					SYS_FREQ/PB_DIV/PRESCALE
+
 
 
 

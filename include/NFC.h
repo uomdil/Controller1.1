@@ -43,7 +43,7 @@
 #include <plib.h>                   // include peripheral library function
 #include "global.h"
 #include "UART.h"
-
+#include "skpic32_glcd.h"
 /* 
 ********************************************************************************************************* 
 *                                               DEFINES
@@ -51,7 +51,7 @@
 */ 
 
 
-#define NFC_RETRY_LIMIT				20
+#define NFC_RETRY_LIMIT				500
 
 
 /* 
@@ -93,7 +93,7 @@
 void NFC_Init();
 char* genNFCmsg();
 void NFCStart();
-
+void closeNFCTimer();
 /* 
 ********************************************************************************************************* 
 *                                        CONFIGURATION BITS 

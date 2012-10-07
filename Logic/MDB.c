@@ -46,11 +46,11 @@
 //UART3B - UART5 
 //UART2B - UART6
 
-#define PB_DIV                 	8
+/*#define PB_DIV                 	8
 #define PRESCALE               	256
 #define MILLISECOND				SYS_FREQ/PB_DIV/PRESCALE/1000
 #define SECOND					SYS_FREQ/PB_DIV/PRESCALE
-
+*/
 
 #define NOT_INIT	0
 #define READY		1
