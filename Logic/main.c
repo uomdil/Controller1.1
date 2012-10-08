@@ -63,13 +63,14 @@
 #define TIMEOUT_30_SEC 30
 #define TIMEOUT_2_MIN 120
 #define TIMEOUT_5_MIN 300
+#define TIMEOUT_10_MIN 600
 
 //#define MONEY_STATE 
 //#define SMS_STATE  
 //#define DEBUG 
 //#define DUMMY_CURRNCY_VAL   // for 2000 val
 #define DUMMY_DB_FLASH 
-#define NFC_STATE
+//#define NFC_STATE
 
 /* 
 ********************************************************************************************************* 
@@ -230,7 +231,7 @@ int main(void)
    		}  		
      	
      	//mdbStateMachine();
-     	//gsmStateMachine();
+     	gsmStateMachine();
 
      	
   	}	
@@ -480,9 +481,9 @@ void stateMachine(uint8 eventId){
 	    	enque(PRODUCT_NO);
     	    changeState(INIT);
     	}
-    	//else if(eventId == (uint8)TIME_OUT){
-	    //	enque(CANCEL);
-    	//}
+    	else if(eventId == (uint8)TIME_OUT){
+	    	enque(CANCEL);
+    	}
     	
      break;
   
@@ -492,13 +493,23 @@ void stateMachine(uint8 eventId){
      	}
      	else if(eventId == (uint8)NFC_GET_CONFIRM) {
      		char* NFCmsg=genNFCmsg();    	
-	      	//gsmSetSmsParameters(NFCmsg,18);
-	      	//gsmEnque(SEND_SMS);
+	      	gsmSetSmsParameters(NFCmsg,18);
+	      	gsmEnque(SEND_SMS);
+	      	//char NFCmsgTmp[NFC_SERIAL_LENGTH+1] ;
+	      	uint8 i=0;
+	      	for(i=0;i<NFC_SERIAL_LENGTH;i++){
+	      		vendingMachineSerial[i]=NFCmsg[i];
+	      	}
+	      	vendingMachineSerial[NFC_SERIAL_LENGTH]='\0';
+	      	
 	      	Disp_GLCDClearDisp();  
 		    Disp_GLCDWriteText(0,0,"Please Wait...");
-		    Disp_GLCDWriteText(0,1,NFCmsg);
+		    Disp_GLCDWriteText(0,1,vendingMachineSerial);
      	}
-     	else if(eventId == (uint8)NFC_CONFIRM) {
+     	else if(eventId == (uint8)GSM_UNIT_SMS_RECVD){
+			handleSMSPayment();	    	
+    	}
+     	else if(eventId == (uint8)OK) {
      		changeState(DISPENSE);
      	}
      	else if(eventId == (uint8)NFC_ERROR){
@@ -520,7 +531,7 @@ void stateMachine(uint8 eventId){
      	}
      	else if(eventId == (uint8)NFC_UNIT_NOT_RESPONDING){
 	     	Disp_GLCDClearDisp();
-		    Disp_GLCDWriteText(0,0,"NFC NOT RESPONDING");
+		    Disp_GLCDWriteText(0,0,"NOT RESPONDING");
 		    DelayMs(200);
 	    	enque(CANCEL);
     	}
@@ -549,7 +560,7 @@ void stateMachine(uint8 eventId){
     	}
     	else if(eventId == (uint8)FIRST_MOTOR){
     		VendMotor1(product_no+0x97);
-    		
+    		startWaitTimer();
     		//Disp_GLCDClearDisp();
 	    	//Disp_GLCDWriteText(0,1,"motor 1");
 	    	//DelayMs(1000);
@@ -590,10 +601,13 @@ void stateMachine(uint8 eventId){
     			//Disp_GLCDClearDisp();
 	    		//Disp_GLCDWriteText(0,1,"motor1 resp");
 	    		
-    			motor_no=0;
+	    		//startWaitTimer()
+    			//motor_no=0;
     			enque(PRODUCT_NO);
-    			changeState(INIT);
+    			changeState(DROP_SENSOR_WAIT);
     		}
+    	}else if(eventId == (uint8)DROP_SENSOR_WAIT){
+    		
     	}
     	
      break;
@@ -712,7 +726,7 @@ void onStateEntry(uint8 stateId){
     
 	    Disp_GLCDClearDisp();
 		DelayMs(20);
-	    Disp_GLCDWriteText(0, 0, " ENTER QUANTITY");
+	    Disp_GLCDWriteText(0, 0, "ENTER QUANTITY");
 		DelayMs(50);				//long delay
 	    keyuse==AMOUNT_SELECT; 
 	    keyPressCount=0; 
@@ -740,7 +754,7 @@ void onStateEntry(uint8 stateId){
     
     case NFC_PAY:
     	closeWaitTimer();
-    	timeOutMAX = TIMEOUT_5_MIN;
+    	timeOutMAX = TIMEOUT_10_MIN;
     	startWaitTimer();
     	keyuse=0;
       	Disp_GLCDClearDisp();
@@ -1054,17 +1068,17 @@ void handlePaymentMethod(){
    	}	
    	else if(key==3)
    	{
- 		/*if(isGsmInitialized == 0){
+ 		if(isGsmInitialized == 0){
 			enque(ENTER_NO);
 			Disp_GLCDClearDisp();
     		Disp_GLCDWriteText(0, 0, "NFC DISABLED");
     		DelayMs(200);
     		key=0;
  		}
-   		else{*/
+   		else{
     		enque(NFC_INFO);
    			changeState(NFC_PAY);
-   		//}
+   		}
    	}
 }
 

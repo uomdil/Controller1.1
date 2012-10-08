@@ -44,7 +44,6 @@ All rights reserved
 
 //msg length
 #define NFC_MSG_LENGTH		18
-#define NFC_SERIAL_LENGTH	10
 
 //NFC commands
 #define RF_ON 			0x10
@@ -71,8 +70,8 @@ All rights reserved
 #define ANTI_COLLISION_IDX 	4
 #define SELECT_IDX			1
 #define RF_FIND_CARD_IDX	2
-#define READ_CARD_IDX		0
 #define REQ_AUTH_IDX		4
+#define READ_CARD_IDX		5
 
 
 /* 
@@ -85,7 +84,7 @@ All rights reserved
 unsigned int NFCRetrys = 0;
 
 //uart data buffer
-char NFCRxBuffer[100];
+uint8 NFCRxBuffer[100];
 unsigned int NFCRxBufferFilled = 0;
 
 //NFC data
@@ -100,7 +99,7 @@ uint8 responseRcvd=0;
 
 uint8 NFCPollingState =0;
 
-uint8 responseArray[]={5,6,7,8,9};
+uint8 responseArray[]={5,6,7,8,9,21};
 
 /* 
 ********************************************************************************************************* 
@@ -134,7 +133,7 @@ void NFC_Init()
 
 void clearBuf(){
 uint8 i=0;
-
+NFCRxBufferFilled=0;
 for(i=0;i<12;i++)
 {
 NFCRxBuffer[i] = 0;
@@ -146,97 +145,42 @@ NFCRxBuffer[i] = 0;
 void pollNFC()
 {
 	switch(NFCPollingState){
-		case (uint8)IDLE_REQUEST_STATE:
-			if(NFCRxBufferFilled >= responseArray[IDLE_REQUEST_IDX]){				//have to check the length of the response if failed
-				if(NFCRxBuffer[3]== 0x00){	
-					NFCRetrys=0;
-					NFCPollingState = (uint8)ANTI_COLLISION_STATE;
-				}
-				startNFCTimer();	
-				responseRcvd =0;
-				clearBuf();
-				NFCRxBufferFilled=0;
-			}
-		break;
-		case (uint8)ANTI_COLLISION_STATE:
-			if(NFCRxBufferFilled >= responseArray[ANTI_COLLISION_IDX]){				//have to check the length of the response if failed
-				if(NFCRxBuffer[3]== 0x00){	
-					NFCRetrys=0;
-					NFCPollingState = (uint8)SELECT_STATE;
-					uint8 i=0;
-					for(i=0;i<4;i++){
-						NFCUIDBuffer[i]=NFCRxBuffer[4+i];
-					}
-				}else{
-					NFCPollingState = IDLE_REQUEST_STATE;			
-				}
-				startNFCTimer();
-				responseRcvd =0;
-				clearBuf();
-				NFCRxBufferFilled=0;	
-			}
-		break;
-		case (uint8)SELECT_STATE:
-			if(NFCRxBufferFilled >= responseArray[SELECT_IDX]){				
-				if(NFCRxBuffer[3]== 0x00){
-					NFCPollingState = (uint8)RF_FIND_CARD_STATE;
-					NFCRetrys=0;
-				}else{
-					NFCPollingState = IDLE_REQUEST_STATE;
-				}	
-				startNFCTimer();
-				responseRcvd =0;
-				clearBuf();
-				NFCRxBufferFilled=0;
-			}
-		break;
-		case (uint8)RF_FIND_CARD_STATE:
-			if(NFCRxBufferFilled >= responseArray[RF_FIND_CARD_IDX]){				//have to check the length of the response if failed
-				if(NFCRxBuffer[3]== 0x00){
-					NFCRetrys=0;
-					NFCPollingState =(uint8)REQ_AUTH_STATE;	
-				}else{					
-					NFCPollingState = IDLE_REQUEST_STATE;
-				}
-				startNFCTimer();
-				responseRcvd =0;
-				clearBuf();
-				NFCRxBufferFilled=0;	
-			}
-		break;
 		case (uint8)REQ_AUTH_STATE:
 			if(NFCRxBufferFilled >= responseArray[REQ_AUTH_IDX]){				//have to check the length of the response if failed
 				if(NFCRxBuffer[3]== 0x00){
 					NFCRetrys=0;					
 					NFCPollingState = READ_CARD_STATE;	
-				}else{					
-					NFCPollingState = IDLE_REQUEST_STATE;
 				}
 				startNFCTimer();
 				responseRcvd =0;
+				clearBuf();	
+			}else if(NFCRxBuffer[3]!= 0x00 && NFCRxBufferFilled >= 5){
+				startNFCTimer();
+				responseRcvd =0;
 				clearBuf();
-				NFCRxBufferFilled=0;	
 			}
 		break;
 		case (uint8)READ_CARD_STATE:
 			if(NFCRxBufferFilled >= responseArray[READ_CARD_IDX]){				//have to check the length of the response if failed
 				if(NFCRxBuffer[3]== 0x00){
 					NFCRetrys=0;
-					closeNFCTimer();					
-					NFCPollingState = (uint8)IDLE_REQUEST_STATE;	
+					closeNFCTimer();						
 					getNFCSerial();
 					enque(NFC_GET_CONFIRM);
-				}else{					
-					NFCPollingState = IDLE_REQUEST_STATE;
+				}else{
+					NFCPollingState = REQ_AUTH_STATE;
 				}
 				responseRcvd =0;
+				clearBuf();	
+			}
+			else if(NFCRxBuffer[3]!= 0x00 && NFCRxBufferFilled >= 5){
+				NFCPollingState = REQ_AUTH_STATE;
+				startNFCTimer();
+				responseRcvd =0;
 				clearBuf();
-				NFCRxBufferFilled=0;	
 			}
 		break;	
-		}
-		
-		
+		}		
 }
 
 
@@ -260,7 +204,8 @@ char* genNFCmsg()
 	{
 		NFCmsg[i] = NFCSerialBuffer[i];
 	}
-	NFCmsg[NFC_SERIAL_LENGTH]='\0';
+	NFCmsg[NFC_SERIAL_LENGTH]=0x1A;
+	NFCmsg[NFC_SERIAL_LENGTH+1]='\0';
 
 	return NFCmsg;
 }
@@ -287,14 +232,18 @@ void testNFC(){
 	
 	if(NFCRxBufferFilled == responseArray[RF_ON_IDX]){			
 		if(NFCRxBuffer[3]== 0x00){
-			clearBuf();	
 			enque(NFC_OK);
-			NFCPollingState = (uint8)IDLE_REQUEST_STATE;
+			NFCPollingState = (uint8)REQ_AUTH_STATE;
 			NFCRetrys=0;
 		}
+		clearBuf();	
+		responseRcvd =0;	
+		closeNFCTimer();
+		
+	}else if(NFCRxBuffer[3]!= 0x00 && NFCRxBufferFilled>=5 ){
+		clearBuf();
 		responseRcvd =0;	
 		startNFCTimer();
-		NFCRxBufferFilled=0;
 	}
 }
 
@@ -316,7 +265,7 @@ void NFCStop()
 
 
 void startNFCTimer(){
-	OpenTimer3(T3_ON | T3_SOURCE_INT | T3_PS_1_256, 100*MILLISECOND);
+	OpenTimer3(T3_ON | T3_SOURCE_INT | T3_PS_1_256, 50*MILLISECOND);
 	ConfigIntTimer3(T3_INT_ON | T3_INT_PRIOR_5);	
 }	
 
@@ -335,60 +284,22 @@ void __ISR(_TIMER_3_VECTOR, ipl5) NFCIntHandler(void){
 	}
 	else if(NFCPollingState == (uint8)RF_ON_STATE){
 		NFCRetrys++;
-		//responseRcvd =0;
-		//testNFC();
 		if(responseRcvd==0)
-		sendNFCCmd((uint8)RF_ON,NFCDataBuffer,1);	
-	}
-	else if(NFCPollingState == (uint8)IDLE_REQUEST_STATE){
-		NFCRetrys++;
-		//responseRcvd =0;
-		//pollNFC();
-		if(responseRcvd==0)
-		sendNFCCmd((uint8)IDLE_REQUEST,NFCDataBuffer,1);
-	}
-	else if(NFCPollingState == (uint8)ANTI_COLLISION_STATE){
-		NFCRetrys++;
-		//responseRcvd =0;
-		//pollNFC();
-		if(responseRcvd==0)
-		sendNFCCmd((uint8)ANTI_COLLISION,NFCDataBuffer,1);
-	}
-	else if(NFCPollingState == (uint8)SELECT_STATE){
-		NFCRetrys++;
-		//responseRcvd=0;
-		uint8 i=0;
-		for(i=0;i<4;i++){
-			NFCDataBuffer[i]=NFCUIDBuffer[i];
-		}	
-		//pollNFC();
-		if(responseRcvd==0)
-		sendNFCCmd((uint8)SELECT,NFCDataBuffer,5);
-	}
-	else if(NFCPollingState == (uint8)RF_FIND_CARD_STATE){
-		NFCRetrys++;
-		//responseRcvd=0;
-		//pollNFC();
-		if(responseRcvd==0)
-		sendNFCCmd((uint8)RF_FIND_CARD,NFCDataBuffer,1);
+		sendNFCCmd((uint8)RF_ON,NFCDataBuffer,1);
 	}
 	else if(NFCPollingState == (uint8)REQ_AUTH_STATE){
 		NFCRetrys++;
-		//responseRcvd=0;
 		uint8 i=0;
 		uint8 tmpDat[]={0x00,0x00,0x01,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
 		for(i=0;i<sizeof(tmpDat);i++){
 			NFCDataBuffer[i]=tmpDat[i];
 		}
-		//pollNFC();
 		if(responseRcvd==0)
 		sendNFCCmd((uint8)REQ_AUTH,NFCDataBuffer,0x0A);
 	}
 	else if(NFCPollingState == (uint8)READ_CARD_STATE){
 		NFCRetrys++;
-		//responseRcvd=0;
 		NFCDataBuffer[0]=0x01;
-		//pollNFC();
 		if(responseRcvd==0)
 		sendNFCCmd((uint8)READ_CARD,NFCDataBuffer,2);
 	}
@@ -408,12 +319,13 @@ UART_INT(NFC_VECTOR, ipl2){  //nfc - UART interrupt
 			NFCRxBuffer[NFCRxBufferFilled] = tmpChar;
 			NFCRxBufferFilled++;
 			responseRcvd =1;
-			if(NFCPollingState == (uint8)RF_ON_STATE){
+			if(NFCRxBufferFilled >= 5){
 				closeNFCTimer();
-				testNFC();
-			}else{
-				closeNFCTimer();
-				pollNFC();
+				if(NFCPollingState == (uint8)RF_ON_STATE){
+					testNFC();
+				}else{
+					pollNFC();
+				}
 			}
 		}											
 	}												

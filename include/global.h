@@ -115,10 +115,11 @@
 #define THIRD_MOTOR			20
 #define MOTOR_OK			21
 #define NFC_INFO			22
-#define NFC_CONFIRM			23
+#define NFC_CONFIRM			23  //not needed
 #define DIAGNOSE			24
 #define GSM_UNIT_SMS_RECVD	25
 #define NFC_OK				26
+#define DROP_SENSOR_WAIT	27
 
 //special error events
 #define GSM_ERROR				27
@@ -131,7 +132,8 @@
 
 #define NO_OF_EVENTS	4
 
-
+//NFC mssages
+#define NFC_SERIAL_LENGTH	7
 
 
 //define true and false

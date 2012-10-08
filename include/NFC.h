@@ -51,7 +51,7 @@
 */ 
 
 
-#define NFC_RETRY_LIMIT				500
+#define NFC_RETRY_LIMIT				200
 
 
 /* 
